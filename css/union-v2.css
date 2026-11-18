@@ -1,0 +1,215 @@
+/* ============================================================
+   NOVA UNION — union-v2.css : real-content sections
+   (org tree, seals, presidency, medals, discord fronts)
+   ============================================================ */
+
+/* hero master seal */
+.hero-seal { margin: 0 auto 1rem; width: 150px; }
+.hero-seal svg { width: 100%; height: auto; filter: drop-shadow(0 0 24px rgba(255,255,255,.28)); }
+
+/* charter lead */
+.charter-lead {
+  font-size: 1.12rem; max-width: 75ch; line-height: 1.7;
+  border-left: 6px solid var(--ink); padding-left: 1.1rem; margin-bottom: 1.6rem;
+}
+
+/* presidency slate */
+.presidency {
+  display: grid; grid-template-columns: 1fr auto 1fr; gap: 1.5rem; align-items: stretch;
+  border: 3px solid var(--ink); background: var(--ink); color: var(--paper);
+  padding: 1.4rem; margin-bottom: 2rem; box-shadow: 10px 10px 0 #000;
+}
+.slate-col { display: flex; flex-direction: column; gap: .6rem; }
+.slate-title { font-family: var(--stencil); font-weight: 700; font-size: .72rem; letter-spacing: .28em; text-transform: uppercase; opacity: .75; border-bottom: 2px solid var(--paper); padding-bottom: .4rem; margin-bottom: .2rem; }
+.slate-name { display: flex; align-items: center; gap: .6rem; font-family: var(--display); font-size: clamp(.95rem, 2.4vw, 1.3rem); letter-spacing: .04em; border: 2px solid var(--paper); padding: .55rem .7rem .4rem; }
+.slate-name.vp { border-style: double; }
+.slate-tick { width: .55rem; height: .55rem; background: var(--paper); transform: rotate(45deg); flex: 0 0 auto; }
+.slate-role { margin-left: auto; font-family: var(--stencil); font-size: .62rem; letter-spacing: .2em; opacity: .7; text-transform: uppercase; }
+.slate-divider { width: 3px; background: repeating-linear-gradient(0deg, var(--paper) 0 8px, transparent 8px 16px); }
+
+/* enlist foot */
+.enlist-foot { margin-top: .9rem; font-size: .82rem; border-top: 1px dashed var(--ink); padding-top: .6rem; }
+.enlist-foot a { color: var(--ink); text-underline-offset: 3px; }
+
+/* ---------- ORG TREE ---------- */
+.org-tree { text-align: center; margin-bottom: 2.5rem; }
+.org-root { display: inline-flex; flex-direction: column; align-items: center; gap: .3rem; border: 2px solid var(--paper); padding: 1.2rem 2rem 1rem; background: #161616; }
+.org-seal { line-height: 0; }
+.org-root-name { font-family: var(--display); font-size: 1.35rem; letter-spacing: .05em; }
+.org-root-motto { font-family: var(--stencil); font-size: .62rem; letter-spacing: .28em; text-transform: uppercase; opacity: .7; }
+.org-branches { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; margin-top: 1.4rem; position: relative; }
+.org-branch { border: 2px solid var(--paper); background: #161616; padding: .8rem; text-align: left; }
+.org-branch-head { font-family: var(--display); font-size: .95rem; letter-spacing: .05em; border-bottom: 2px solid var(--paper); padding-bottom: .4rem; margin-bottom: .5rem; }
+.org-branch-blurb { display: block; font-family: var(--body); font-size: .68rem; letter-spacing: .04em; opacity: .65; margin-top: .25rem; }
+.org-children { list-style: none; }
+.org-child {
+  display: block; width: 100%; text-align: left; background: transparent; color: var(--paper);
+  border: 1px solid rgba(242,242,242,.35); border-left: 4px solid var(--paper);
+  font-family: var(--stencil); font-weight: 600; font-size: .8rem; letter-spacing: .06em; text-transform: uppercase;
+  padding: .45rem .6rem; margin-bottom: .35rem; cursor: pointer; transition: all .12s;
+}
+.org-child:hover { background: var(--paper); color: var(--ink); }
+
+/* ---------- FACTION GROUPS ---------- */
+.faction-group { margin-bottom: 2rem; }
+.faction-branch {
+  font-family: var(--display); font-size: 1.15rem; letter-spacing: .05em;
+  border-bottom: 2px solid var(--paper); padding-bottom: .35rem; margin-bottom: 1rem;
+}
+.faction-branch-blurb { display: inline-block; font-family: var(--body); font-size: .75rem; font-weight: 400; letter-spacing: 0; text-transform: none; opacity: .7; margin-left: .8rem; }
+.seal-banner {
+  display: flex; justify-content: center; align-items: center;
+  padding: 1.2rem .5rem 1rem; min-height: 195px; background: #161616;
+  border-bottom: 2px solid var(--paper);
+}
+.seal-banner svg { width: 150px; height: auto; }
+.faction-emblem { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 3px solid var(--paper); }
+
+/* ---------- DOSSIER (updated layout) ---------- */
+.dossier-top { display: grid; grid-template-columns: auto 1fr; gap: 1.4rem; align-items: center; margin-bottom: 1rem; border-bottom: 3px double var(--ink); padding-bottom: 1rem; }
+.dossier-branch { font-family: var(--stencil); font-weight: 700; font-size: .68rem; letter-spacing: .3em; text-transform: uppercase; opacity: .65; }
+.dossier-seal svg { width: 170px; height: auto; }
+.dossier-emblem { width: 170px; height: 170px; object-fit: cover; border-radius: 50%; border: 3px solid var(--ink); }
+.dossier-discord { display: inline-block; margin-top: .6rem; }
+
+/* ---------- RANKS (official groups) ---------- */
+.rank-groups { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+.rank-group { border: 3px solid var(--ink); background: var(--paper); box-shadow: 8px 8px 0 var(--ink); }
+.rank-group-head { display: flex; align-items: baseline; gap: .6rem; background: var(--ink); color: var(--paper); padding: .55rem .8rem .4rem; }
+.rank-group-name { font-family: var(--display); font-size: .85rem; letter-spacing: .06em; }
+.rank-group-blurb { font-size: .68rem; opacity: .7; font-style: italic; margin-left: auto; }
+.rank-rows { list-style: none; }
+.rank-rows li { display: grid; grid-template-columns: 1fr auto; gap: .6rem; align-items: baseline; padding: .32rem .8rem; border-bottom: 1px dotted #c9c9c6; font-size: .9rem; }
+.rank-rows li:last-child { border-bottom: 0; }
+.rank-row-name { font-family: var(--stencil); font-weight: 600; letter-spacing: .04em; }
+.rank-row-note { font-size: .72rem; opacity: .65; text-align: right; }
+
+/* requirements table */
+.requirements-title { font-family: var(--display); font-size: 1.3rem; letter-spacing: .05em; }
+.requirements-note { font-size: .8rem; opacity: .75; margin: .2rem 0 .7rem; font-style: italic; }
+.req-min { font-family: var(--stencil); font-weight: 700; letter-spacing: .1em; white-space: nowrap; }
+
+/* ---------- MEDALS ---------- */
+.medals-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+.medal-card { display: grid; grid-template-columns: 90px 1fr; gap: 1rem; border: 2px solid var(--paper); background: #161616; padding: 1rem; }
+.medal-disc { display: flex; align-items: flex-start; justify-content: center; }
+.medal-disc svg { width: 76px; height: auto; }
+.medal-tier { font-family: var(--stencil); font-weight: 700; font-size: .6rem; letter-spacing: .35em; opacity: .6; text-transform: uppercase; }
+.medal-name { font-family: var(--display); font-size: 1.05rem; line-height: 1.25; margin: .15rem 0 .3rem; }
+.medal-summary { font-size: .85rem; opacity: .9; margin-bottom: .45rem; }
+.medal-earn-title { font-family: var(--stencil); font-weight: 700; font-size: .62rem; letter-spacing: .25em; opacity: .6; border-top: 1px solid rgba(242,242,242,.35); padding-top: .45rem; }
+.medal-earn { list-style: none; font-size: .8rem; }
+.medal-earn li { padding-left: 1rem; position: relative; margin-bottom: .15rem; opacity: .92; }
+.medal-earn li::before { content: "›"; position: absolute; left: 0; font-size: .85rem; top: -.05em; }
+
+/* honors section separation */
+.honors-section { border-top: 4px solid var(--paper); }
+
+/* ---------- DISCORD FRONTS ---------- */
+.discord-fronts { display: flex; flex-direction: column; gap: .7rem; }
+.discord-front {
+  display: grid; grid-template-columns: 56px 1fr auto; align-items: center; gap: .9rem;
+  text-decoration: none; color: var(--ink); border: 2px solid var(--ink);
+  padding: .6rem .8rem; background: var(--paper); transition: all .15s;
+}
+.discord-front:hover { background: var(--ink); color: var(--paper); }
+.df-glyph {
+  font-family: var(--display); font-size: .72rem; width: 56px; height: 56px;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  background: var(--ink); color: var(--paper); border-radius: 6px; line-height: 1.15;
+}
+.discord-front:hover .df-glyph { background: var(--paper); color: var(--ink); }
+.df-name { display: block; font-family: var(--stencil); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: .9rem; }
+.df-sub { display: block; font-size: .74rem; opacity: .8; margin-top: .1rem; }
+.df-go { font-family: var(--stencil); font-weight: 700; font-size: .75rem; letter-spacing: .2em; color: var(--ink); }
+.discord-front:hover .df-go { color: var(--paper); }
+
+/* ---------- responsive ---------- */
+@media (max-width: 1024px) {
+  .medals-grid { grid-template-columns: 1fr; }
+  .rank-groups { grid-template-columns: 1fr; }
+}
+@media (max-width: 860px) {
+  .presidency { grid-template-columns: 1fr; }
+  .slate-divider { width: 100%; height: 3px; }
+  .org-branches { grid-template-columns: 1fr; }
+  .dossier-top { grid-template-columns: 1fr; text-align: center; }
+  .dossier-seal { margin-left: auto; margin-right: auto; }
+  .dossier-discord { margin-left: auto; margin-right: auto; }
+}
+
+/* ---------- DOCTRINE SECTION + DOCTRINE PAGE ---------- */
+.doc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.doc-card {
+  display: flex; flex-direction: column; gap: .6rem;
+  border: 3px solid var(--ink); background: var(--paper);
+  padding: 1.1rem 1.1rem 1rem; text-decoration: none; color: var(--ink);
+  box-shadow: 10px 10px 0 #000; transition: all .15s;
+}
+.doc-card:hover { background: var(--ink); color: var(--paper); transform: translate(-2px,-2px); box-shadow: 14px 14px 0 #000; }
+.doc-card-top { display: flex; justify-content: flex-start; border-bottom: 2px solid var(--ink); padding-bottom: .6rem; margin-bottom: .2rem; }
+.doc-card:hover .doc-card-top { border-color: var(--paper); }
+.doc-icon {
+  font-family: var(--display); font-size: .95rem; width: 56px; height: 56px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--ink); color: var(--paper); border: 2px solid var(--paper); border-radius: 2px; letter-spacing: .05em;
+}
+.doc-card:hover .doc-icon { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.doc-name { font-family: var(--display); font-size: 1.25rem; letter-spacing: .03em; line-height: 1.15; margin: .2rem 0 0; }
+.doc-summary { font-family: var(--body); font-size: .82rem; line-height: 1.55; opacity: .92; }
+.doc-meta { font-family: var(--stencil); font-weight: 600; font-size: .6rem; letter-spacing: .22em; text-transform: uppercase; opacity: .7; border-top: 1px dashed var(--ink); padding-top: .6rem; }
+.doc-card:hover .doc-meta { border-color: var(--paper); }
+.doc-go { font-family: var(--stencil); font-weight: 700; font-size: .78rem; letter-spacing: .18em; }
+
+/* doctrine.html hero */
+.doc-hero { background: var(--ink); color: var(--paper); padding: clamp(2.2rem, 6vw, 4rem) 0; text-align: center; }
+.doc-hero-kicker { display: flex; align-items: center; justify-content: center; gap: .9rem; font-family: var(--stencil); font-weight: 600; font-size: .72rem; letter-spacing: .34em; text-transform: uppercase; opacity: .85; }
+.doc-hero-kicker .rule { display: inline-block; width: 56px; height: 2px; background: var(--paper); opacity: .6; }
+.doc-hero-title { font-family: var(--display); font-size: clamp(2.6rem, 9vw, 4.6rem); line-height: 1.02; letter-spacing: .02em; margin: 1rem 0 .6rem; }
+.doc-hero-motto { font-family: var(--stencil); font-weight: 600; letter-spacing: .4em; font-size: .8rem; text-transform: uppercase; opacity: .8; }
+
+/* doctrine articles */
+.doctrine-page { display: flex; flex-direction: column; gap: 2rem; }
+.doc-article { border: 3px solid var(--ink); padding: clamp(1.2rem, 3vw, 2.2rem); background: var(--paper); box-shadow: 12px 12px 0 #000; }
+.doc-article-tag { font-family: var(--stencil); font-weight: 600; font-size: .66rem; letter-spacing: .3em; text-transform: uppercase; opacity: .7; border-bottom: 2px solid var(--ink); padding-bottom: .5rem; margin-bottom: .8rem; }
+.doc-article-title { font-family: var(--display); font-size: clamp(1.6rem, 4.5vw, 2.2rem); letter-spacing: .02em; margin-bottom: .3rem; }
+.doc-article-status { font-family: var(--body); font-size: .85rem; border-left: 4px solid var(--ink); padding-left: .7rem; margin-bottom: 1.2rem; line-height: 1.5; }
+.doc-article h3 { font-family: var(--stencil); font-weight: 700; letter-spacing: .12em; font-size: 1rem; text-transform: uppercase; margin: 1.4rem 0 .5rem; border-bottom: 1px dashed var(--ink); padding-bottom: .3rem; }
+.doc-article ul, .doc-article ol { font-family: var(--body); font-size: .9rem; line-height: 1.65; padding-left: 1.6rem; display: flex; flex-direction: column; gap: .3rem; }
+.doc-article li::marker { font-weight: 700; }
+.doc-article-foot { font-family: var(--body); font-size: .76rem; font-style: italic; opacity: .75; border-top: 1px dashed var(--ink); margin-top: 1.3rem; padding-top: .7rem; }
+.doc-article-sign { font-family: var(--body); font-size: .95rem; line-height: 1.7; margin-top: 1.4rem; border-top: 2px solid var(--ink); padding-top: .9rem; }
+.doc-back { text-align: center; }
+.doc-back a { font-family: var(--stencil); font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 3px solid var(--ink); padding-bottom: .15rem; }
+.doc-back a:hover { opacity: .7; }
+.doc-back a:focus-visible { outline: 3px dashed var(--ink); outline-offset: 3px; }
+@media (max-width: 1024px) { .doc-grid { grid-template-columns: 1fr; } }
+
+/* real emblem assets */
+.nav-logo, .foot-logo { object-fit: contain; }
+.hero-seal img { width: 100%; height: auto; filter: drop-shadow(0 0 26px rgba(255,255,255,.30)); }
+.org-seal-img { width: 110px; height: auto; }
+.org-child { display: flex; align-items: center; gap: .6rem; }
+.org-child span { flex: 1 1 auto; }
+.org-thumb { width: 32px; height: 32px; flex: 0 0 auto; border-radius: 50%; object-fit: cover; }
+.org-branch-head { display: flex; align-items: center; gap: .7rem; }
+.org-branch-head > span { display: flex; flex-direction: column; }
+.org-branch-head .org-thumb { width: 40px; height: 40px; }
+.org-child svg, .org-branch-head svg { flex: 0 0 auto; }
+
+/* ---------- DOSSIER / NEWS MODAL: black on black ---------- */
+.modal-panel { background: #000000; color: #f2f2f2; border-color: #f2f2f2; }
+.modal-close { background: #f2f2f2; color: #000000; }
+.modal-close:hover { background: #e4e4e1; color: #000000; }
+.dossier-title { color: #f2f2f2; }
+.dossier-motto { color: #f2f2f2; opacity: .7; }
+.dossier-block { border-color: #f2f2f2; }
+.dossier-block h4 { border-bottom-color: #f2f2f2; color: #f2f2f2; }
+.dossier-block p, .dossier-block li, .news-modal-body p { color: #f2f2f2; }
+.news-modal-cat { opacity: .75; color: #f2f2f2; }
+.news-modal-title { color: #f2f2f2; }
+.news-modal-sign { border-top-color: #f2f2f2; }
+.doc-link { color: #f2f2f2; }
+.doc-link:hover { background: #f2f2f2; color: #000000; }
+.dossier-emblem-wrap { background: #000000; }
+.dossier-block li::before { color: #f2f2f2; }
