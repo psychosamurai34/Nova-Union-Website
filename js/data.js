@@ -272,16 +272,16 @@ const MEDALS = [
 
 /* ───────── NATIONAL HONORS — this week\u2019s roll [PLACEHOLDER] ───────── */
 const HONOREES = [
-  { name: 'Reaper-6',      rank: 'E-6 Sergeant',       citation: 'Held the line at Kessler Ridge when the order wavered.' },
-  { name: 'Vera Kestrel',  rank: 'E-5 Corporal',       citation: 'Dragged two wounded operators through crossfire without a scratch.' },
-  { name: 'Ironledger',    rank: 'G-3 Campaign Officer', citation: 'Resupplied three squads through a storm the map said was impassable.' },
-  { name: 'Domino',        rank: 'E-1 Recruit',        citation: 'Never missed a training. Not once. Not ever.' },
-  { name: 'Ashfall',       rank: 'TNA-2 Intelligence Officer', citation: 'Coordinated the extraction under total comms blackout.' },
-  { name: 'Mother Mercy',  rank: 'O-5 Major',          citation: 'Medevac chain held through the heaviest barrage of the season.' },
-  { name: 'Longwatch',     rank: 'E-2 Private',        citation: 'Nine confirmed from a single overwatch position. Unseen. Unheard.' },
-  { name: 'Static',        rank: 'TNA-1 Field Agent',  citation: 'Rebuilt the net in 4 minutes after a direct strike on comms.' },
-  { name: 'Old Barley',    rank: 'O-7 Colonel',        citation: 'Mentored 14 recruits to full qualification this cycle alone.' },
-  { name: 'Threnody',      rank: 'E-4 Specialist',     citation: 'Planted the Union star at the Hollow Relay under fire.' }
+  { name: 'Mark H Botkin',  rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
+  { name: 'ĎĴ༒ƝØVÄ',       rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
+  { name: 'ᴇᴠᴀɴᴠʀ',         rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
+  { name: 'ĄŘAƁ༒ƝØVÄ',      rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
+  { name: 'me21 6f53',      rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
+  { name: 'Shadow McLaren', rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
+  { name: 'Mr-reaper73',    rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
+  { name: '༒Mr Ðårk༒',      rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
+  { name: 'Foxxy Chiller',  rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
+  { name: 'x_Bass_x',       rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' }
 ];
 
 /* ───────── UNION WIRE announcements ───────── */
@@ -348,6 +348,17 @@ const NEWS = [
       'Demotions - Officers and Generals who cannot do their job(s) will be demoted from now on. Generals and Senior Officers MUST train and enhance new officers to be productive, or they will be demoted.'
     ],
     sign: 'Forever Loyal, Forever Nova — Your Vice Chancellor, ƇΉΙΡ༒ƝØVÄ'
+  },
+  {
+    id: 'n6', cat: 'NATIONAL HONORS', date: 'NOV 12, 2026',
+    headline: 'National Honors — Week of November 12, 2026',
+    dek: 'Ten names called before the Union — official issue under the Presidency.',
+    body: [
+      'By order of the Presidency, the Weekly National Honors recognize individuals who have demonstrated outstanding dedication, activity, professionalism, loyalty, and meaningful contributions to the Nova Union.',
+      'This week\'s honorees: Mark H Botkin, ĎĴ༒ƝØVÄ, ᴇᴠᴀɴᴠʀ, ĄŘAƁ༒ƝØVÄ, me21 6f53, Shadow McLaren, Mr-reaper73, ༒Mr Ðårk༒, Foxxy Chiller, x_Bass_x.',
+      'National Honors convenes every Thursday. If you are not recognized this week, keep your head up — next Thursday is always a new draw.'
+    ],
+    sign: '— By Order of the Presidency, KÅƤEĐ༒ƝØVÄ'
   }
 ];
 

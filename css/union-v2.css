@@ -213,3 +213,16 @@
 .doc-link:hover { background: #f2f2f2; color: #000000; }
 .dossier-emblem-wrap { background: #000000; }
 .dossier-block li::before { color: #f2f2f2; }
+
+/* ---------- OFFICIAL DOCUMENT IMAGE ---------- */
+.honors-doc {
+  background: var(--paper); color: var(--ink);
+  border: 4px solid var(--paper); box-shadow: 10px 10px 0 #000;
+  max-width: 560px; margin: 2rem auto; padding: .8rem; text-align: center;
+}
+.honors-doc img { width: 100%; height: auto; display: block; background: #fff; }
+.honors-doc figcaption {
+  font-family: var(--stencil); font-weight: 600; font-size: .72rem;
+  letter-spacing: .18em; text-transform: uppercase;
+  border-top: 2px solid var(--ink); padding-top: .7rem; margin-top: .7rem;
+}
