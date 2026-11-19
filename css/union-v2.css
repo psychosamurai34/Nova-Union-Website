@@ -291,3 +291,12 @@
   .leadership-grid { grid-template-columns: 1fr; }
   .contact-links { grid-template-columns: 1fr; }
 }
+
+/* ---------- nav youtube pills ---------- */
+.nav-yt {
+  display: inline-flex; align-items: center; gap: .3rem;
+  font-family: var(--stencil); font-weight: 700; font-size: .67rem; letter-spacing: .15em; text-transform: uppercase;
+  color: var(--paper); background: var(--ink); border: 2px solid var(--paper);
+  text-decoration: none; padding: .35rem .6rem .3rem; white-space: nowrap;
+}
+.nav-yt:hover { background: var(--paper); color: var(--ink); }
