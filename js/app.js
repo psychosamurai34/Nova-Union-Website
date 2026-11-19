@@ -97,6 +97,29 @@ if ($('#aboutUpdated')) $('#aboutUpdated').textContent = NOVA_CONFIG.lastUpdated
 $('#forumReport').href  = NOVA_CONFIG.forumReportUrl;
 $('#forumSuggest').href = NOVA_CONFIG.forumSuggestUrl;
 
+/* Leadership render */
+const leadershipEl = $('#leadershipGrid');
+if (leadershipEl && typeof LEADERSHIP !== 'undefined') {
+  leadershipEl.innerHTML = LEADERSHIP.map(l => `
+    <div class="leader-tile">
+      <h4 class="leader-title">${esc(l.title)}</h4>
+      <p class="leader-body">${esc(l.body)}</p>
+    </div>`).join('');
+}
+
+/* Video of the day (paste youtube URL in js/data.js → VIDEO_OF_DAY) */
+const videoEmbedEl = $('#videoEmbed');
+const videoPlaceholderEl = $('#videoPlaceholder');
+if (videoEmbedEl && videoPlaceholderEl && typeof VIDEO_OF_DAY !== 'undefined' && VIDEO_OF_DAY) {
+  const m = String(VIDEO_OF_DAY).match(/(?:v=|youtu\.be\/|embed\/)([A-Za-z0-9_-]{6,})/);
+  const id = m && m[1];
+  if (id) {
+    videoPlaceholderEl.hidden = true;
+    videoEmbedEl.hidden = false;
+    videoEmbedEl.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${esc(id)}" title="Nova Video of the Day" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+  }
+}
+
 /* ───────── Social fronts ───────── */
 const socialGrid = $('#socialGrid');
 if (socialGrid) socialGrid.innerHTML = ''; // socials moved to Discord fronts — handled below

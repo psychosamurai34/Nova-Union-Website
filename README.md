@@ -13,7 +13,7 @@ Double-click `index.html` — works straight from your desktop. (Fonts come from
 | 3-part presidency & 2-part vice presidency | `PRESIDENTS` / `VICE_PRESIDENTS` |
 | Org chart (3 branches) | `ORG_TREE` |
 | Factions: mandates, structure, eligibility, docs, Discord | `FACTIONS` (+ `FACTION_MOTTOS`) |
-| Official ranks (6 groups, E/O/G/TNA + Leadership) | `RANK_GROUPS` |
+| Official ranks | `RANK_GROUPS` |
 | Minimum rank requirements | `REQUIREMENTS` |
 | The 7 Nova Union medals & how to earn | `MEDALS` |
 | UNION WIRE ticker + Notice Board | `ANNOUNCEMENTS` |
@@ -41,9 +41,6 @@ Section 08 links out to `forumReportUrl` and `forumSuggestUrl` — point them at
 Netlify Drop / Cloudflare Pages / GitHub Pages — it's fully static. Drag the folder or push the repo; done.
 
 ## TODOs
-- [ ] Real forum URLs (report / suggest)
-- [ ] Real social fronts (only the 4 Discords provided so far)
-- [ ] Real emblem files → `assets/emblems/` + `emblem:` in data.js
-- [ ] Real this-week honorees (`HONOREES` currently a sample)
-- [ ] Nova Holland mandate ("record pending" as provided)
+- [ ] YouTube Video of the Day embed — paste URL into `NOVA_CONFIG.videoOfDay`
+- [ ] Real emblem for remaining faction (correcting seal only)
 - [ ] Anything marked [PLACEHOLDER]

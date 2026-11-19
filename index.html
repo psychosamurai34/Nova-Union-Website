@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=3">
-<link rel="stylesheet" href="css/union-v2.css?v=3">
+<link rel="stylesheet" href="css/styles.css?v=4">
+<link rel="stylesheet" href="css/union-v2.css?v=4">
 </head>
 <body>
 
@@ -31,6 +31,7 @@
   <nav class="nav-links" aria-label="Site sections">
     <a href="#about">The Union</a>
     <a href="#order-of-battle">Order of Battle</a>
+    <a href="#leadership">Leadership</a>
     <a href="#ranks">Ranks</a>
     <a href="#medals">Medals</a>
     <a href="#honors">Honors</a>
@@ -107,11 +108,36 @@
   </div>
 </section>
 
+
+<!-- LEADERSHIP & CONTACT -->
+<section class="section white" id="leadership">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">SECTION 03</span>
+      <h2 class="section-title">LEADERSHIP<span class="tick">_</span></h2>
+      <p class="section-lede">The offices of the Union High Command. The chain is binding  orders flow down, reports flow up.</p>
+    </div>
+
+    <div class="leadership-grid" id="leadershipGrid"><!-- rendered --></div>
+
+    <div class="contact-strip">
+      <h3 class="contact-title">CONTACT THE HIGH COMMAND</h3>
+      <div class="contact-links">
+        <a class="contact-link" href="https://vrchat.com/home/group/grp_d3e5b2c6-0691-4a49-b246-1fd6eee6eff9" target="_blank" rel="noopener">VRCHAT GROUP<br><span>THE NOVA UNION</span></a>
+        <a class="contact-link" href="https://discord.gg/7Ys67AcBm2" target="_blank" rel="noopener">DISCORD<br><span>THE NOVA UNION MAIN</span></a>
+        <a class="contact-link" href="https://youtube.com/@thenovaunionvrc" target="_blank" rel="noopener">NOVA UNION CHANNEL<br><span>@THENOVAUNIONVRC</span></a>
+        <a class="contact-link" href="https://youtube.com/@novaunionnews" target="_blank" rel="noopener">NOVA UNION NEWS<br><span>@NOVAUNIONNEWS</span></a>
+      </div>
+      <p class="contact-note">For reports, promotions, disputes, or urgent matters  open a ticket in the Union Discord. Officers answer in order of rank.</p>
+    </div>
+  </div>
+</section>
+
 <!-- RANK STRUCTURE -->
 <section class="section white" id="ranks">
   <div class="wrap">
     <div class="section-head">
-      <span class="section-tag">SECTION 03</span>
+      <span class="section-tag">SECTION 04</span>
       <h2 class="section-title">RANK STRUCTURE<span class="tick">_</span></h2>
       <p class="section-lede">Official ranks of the Nova Union — last updated 11/11/2026. From E-1 Recruit to General of The Union.</p>
     </div>
@@ -134,7 +160,7 @@
 <section class="section black" id="medals">
   <div class="wrap">
     <div class="section-head">
-      <span class="section-tag light">SECTION 04</span>
+      <span class="section-tag light">SECTION 05</span>
       <h2 class="section-title light">NOVA UNION MEDALS<span class="tick">_</span></h2>
       <p class="section-lede light">Seven official decorations of the Union — from the Bronze Star of Dedication to the Grand Star, nominated only by the President. Medal registry made by ƇΉΙΡ༒ƝØVÄ.</p>
     </div>
@@ -146,7 +172,7 @@
 <section class="section black honors-section" id="honors">
   <div class="wrap">
     <div class="section-head">
-      <span class="section-tag light">SECTION 05</span>
+      <span class="section-tag light">SECTION 06</span>
       <h2 class="section-title light">NATIONAL HONORS<span class="tick">_</span></h2>
       <p class="section-lede light">Every Thursday. No combat. Ten names called before the Union.</p>
     </div>
@@ -182,11 +208,34 @@
 <section class="section white" id="news">
   <div class="wrap">
     <div class="section-head">
-      <span class="section-tag">SECTION 06</span>
+      <span class="section-tag">SECTION 07</span>
       <h2 class="section-title">NOVA NEWS<span class="tick">_</span></h2>
       <p class="section-lede">Official dispatches of the Union. Tap a dispatch to read it in full.</p>
     </div>
     <div class="news-grid" id="newsGrid"><!-- rendered --></div>
+    <div class="news-youtube">
+      <a class="yt-pill" href="https://youtube.com/@thenovaunionvrc" target="_blank" rel="noopener"><span class="yt-icon">�</span>THE NOVA UNION  @THENOVAUNIONVRC</a>
+      <a class="yt-pill" href="https://youtube.com/@novaunionnews" target="_blank" rel="noopener"><span class="yt-icon">�</span>NOVA UNION NEWS  @NOVAUNIONNEWS</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- VIDEO OF THE DAY -->
+<section class="section black" id="video">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag light">SECTION 08</span>
+      <h2 class="section-title light">VIDEO OF THE DAY<span class="tick">_</span></h2>
+      <p class="section-lede light">One clip, chosen by the Union High Command. Updated in <code>js/data.js</code>.</p>
+    </div>
+    <div class="video-frame">
+      <div class="video-placeholder" id="videoPlaceholder">
+        <div class="video-placeholder-title">LINK TO COME</div>
+        <div class="video-placeholder-sub">PASTE A YOUTUBE URL INTO <code>VIDEO_OF_DAY</code> IN <code>js/data.js</code></div>
+      </div>
+      <div class="video-embed" id="videoEmbed" hidden></div>
+    </div>
   </div>
 </section>
 
@@ -194,7 +243,7 @@
 <section class="section white" id="doctrine">
   <div class="wrap">
     <div class="section-head">
-      <span class="section-tag">SECTION 07</span>
+      <span class="section-tag">SECTION 08</span>
       <h2 class="section-title">DOCTRINE<span class="tick">_</span></h2>
       <p class="section-lede">Official documents of the Union — binding on enlisted, officers, and Legion alike.</p>
     </div>
@@ -236,7 +285,7 @@
 <section class="section white connect" id="connect">
   <div class="wrap">
     <div class="section-head">
-      <span class="section-tag">SECTION 08</span>
+      <span class="section-tag">SECTION 09</span>
       <h2 class="section-title">FIND THE UNION<span class="tick">_</span></h2>
       <p class="section-lede">Where the Union gathers — VRChat, and the four Discord fronts.</p>
     </div>
@@ -276,7 +325,7 @@
 <section class="section black" id="forums">
   <div class="wrap">
     <div class="section-head">
-      <span class="section-tag light">SECTION 09</span>
+      <span class="section-tag light">SECTION 10</span>
       <h2 class="section-title light">THE FORUMS<span class="tick">_</span></h2>
       <p class="section-lede light">Two doors. One leads to justice, the other to the future of this site. Both open in the Union's external forums.</p>
     </div>
@@ -310,8 +359,8 @@
     <p class="foot-motto" id="footerMotto">UNITED WE STAND STRONG — THE NOVA UNION</p>
     <div class="foot-mark" aria-hidden="true"><img src="assets/brand/psi-glyph-light.png" alt="PSY — spear glyph"></div>
     <nav class="foot-links" aria-label="Footer">
-      <a href="#about">The Union</a><a href="#order-of-battle">Order of Battle</a><a href="#ranks">Ranks</a>
-      <a href="#medals">Medals</a><a href="#honors">Honors</a><a href="#news">Nova News</a><a href="#doctrine">Doctrine</a><a href="#connect">Find Us</a><a href="#forums">Forums</a>
+      <a href="#about">The Union</a><a href="#order-of-battle">Order of Battle</a><a href="#leadership">Leadership</a><a href="#ranks">Ranks</a>
+      <a href="#medals">Medals</a><a href="#honors">Honors</a><a href="#news">Nova News</a><a href="#doctrine">Doctrine</a><a href="#video">Video of the Day</a><a href="#connect">Find Us</a><a href="#forums">Forums</a>
     </nav>
     <p class="foot-legal">The Nova Union is an independent, fan-run VRChat milsim group. Not affiliated with any government, military, or other VRChat group. All ranks, medals, proclamations and "nations" are faction lore — the discipline is real, the borders are not.</p>
   </div>
@@ -335,8 +384,8 @@
   </div>
 </div>
 
-<script src="js/data.js?v=3"></script>
-<script src="js/app.js?v=3"></script>
+<script src="js/data.js?v=4"></script>
+<script src="js/app.js?v=4"></script>
 
 </body>
 </html>

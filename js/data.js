@@ -34,9 +34,9 @@ const VICE_PRESIDENTS = [
 /* ───────── ORDER OF BATTLE (org tree) ───────── */
 // Three top-level branches. children reference FACTIONS ids.
 const ORG_TREE = [
-  { branch: 'THE NOVA GOVERNMENT', blurb: 'Supreme governing authority of the Union', children: ['government', 'agency', 'coalition'] },
+  { branch: 'THE NOVA GOVERNMENT', blurb: 'Supreme governing authority of the Union', children: ['government', 'agency'] },
   { branch: 'THE NOVA BRIGADE',    blurb: 'The Union\u2019s military fighting force',   children: ['brigade', 'armored', 'medics'] },
-  { branch: 'THE NOVA LEGION',     blurb: 'Elite force of the Union\u2019s order',       children: ['legion', 'reapers', 'guards', 'police', 'holland'] }
+  { branch: 'THE NOVA LEGION',     blurb: 'Elite force of the Union\u2019s order',       children: ['legion', 'reapers', 'guards', 'police'] }
 ];
 
 /* ───────── FACTIONS (divisions) ───────── */
@@ -59,14 +59,6 @@ const FACTIONS = [
     structure: 'Serves directly under the Leadership of the Government, with the Director representing the Agency.',
     eligibility: 'Minimum Rank: E-6 — Members must hold the rank of E-6 or higher to be eligible to join the Agency.',
     docs: [], discord: 'discordAgency'
-  },
-  {
-    id: 'coalition', name: 'The Nova Coalition', branch: 'THE NOVA GOVERNMENT',
-    initials: 'NC', sealHint: 'TORCH', emblem: 'assets/emblems/coalition.png',
-    mandate: 'The Nova Coalition is an international organization established under the leadership and authority of The Nova Union, designed to unite multiple independent groups, organizations, and affiliated nations under one centralized system of cooperation, administration, and leadership.',
-    structure: 'An international arm of the Union — independent groups cooperate under one centralized system of administration and leadership.',
-    eligibility: 'By establishment of the Nova Government. No public rank minimum.',
-    docs: [], discord: null
   },
   {
     id: 'brigade', name: 'The Nova Brigade', branch: 'THE NOVA BRIGADE',
@@ -123,14 +115,6 @@ const FACTIONS = [
     structure: 'Division of The Nova Legion — justice, discipline, and internal security.',
     eligibility: 'Minimum Rank: E-5 — Members must hold the rank of E-5 or higher to be eligible to join the Nova Police.',
     docs: [], discord: 'discordMP'
-  },
-  {
-    id: 'holland', name: 'The Nova Holland', branch: 'THE NOVA LEGION',
-    initials: 'NH', sealHint: 'QUESTION', emblem: 'assets/emblems/holland.png',
-    mandate: 'The Nova Holland — record pending. Listed in the official Union order of battle under The Nova Legion as of 11/13/2026. Full mandate to be published by the Government.',
-    structure: 'Division of The Nova Legion. Mandate pending publication.',
-    eligibility: 'Record pending — await official Government announcement.',
-    docs: [], discord: null
   }
 ];
 
@@ -138,38 +122,29 @@ const FACTIONS = [
 const FACTION_MOTTOS = {
   government: 'AUTHORITY THROUGH UNITY',
   agency:     'ORDER THROUGH INTELLIGENCE',
-  coalition:  'ORDER THROUGH INTELLIGENCE',
   brigade:    'DUTY WITHOUT COMPROMISE',
   armored:    'IRON RESOLVE. UNSTOPPABLE FORCE',
   medics:     'THROUGH CHAOS WE BRING HOPE',
   legion:     'ORDER IS OUR STRENGTH',
   reapers:    'WE REAP WHAT OTHERS FEAR',
   guards:     'WE GUARD WHAT OTHERS CANNOT',
-  police:     'UPHOLDING ORDER DEFENDING HONOR',
-  holland:    'RECORD PENDING'
+  police:     'UPHOLDING ORDER DEFENDING HONOR'
 };
 
 /* ───────── UNION-WIDE RANK LADDER (retired — see RANK_GROUPS) ───────── */
 /* ───────── RANK STRUCTURE (official, last updated 11/11/2026) ───────── */
 const RANK_GROUPS = [
   {
-    group: 'LEADERSHIP', blurb: 'The summit of the Union',
+    group: 'GOVERNMENT', blurb: 'The official order of the Union executive',
     rows: [
-      { name: 'President',       note: 'Three-part presidency' },
-      { name: 'Vice President',  note: 'Two-part vice presidency' },
-      { name: 'Chancellor',      note: 'Senior civilian office' },
-      { name: 'Vice-Chancellor', note: 'Next to the Chancellor' }
-    ]
-  },
-  {
-    group: 'GOVERNMENT', blurb: 'Six grades of state authority',
-    rows: [
-      { name: 'G-6 Prime Minister',    note: 'Speaks for the Government' },
-      { name: 'G-5 Minister',          note: 'Heads a portfolio of state' },
-      { name: 'G-4 Advisor',           note: 'Counsel to the Government' },
-      { name: 'G-3 Campaign Officer',  note: 'Runs official events' },
-      { name: 'G-2 Government Officer',note: 'Executive arm of the state' },
-      { name: 'G-1 Secretary',         note: 'Records and administration' }
+      { name: 'Chancellor',         note: 'Head of the Government' },
+      { name: 'Vice Chancellor',    note: 'Second to the Chancellor' },
+      { name: 'Prime Minister',     note: 'Speaks for the Government' },
+      { name: 'Chief of Staff',     note: 'Runs the Chancellor’s office' },
+      { name: 'Minister',           note: 'Heads a portfolio of state' },
+      { name: 'Propaganda Director',note: 'Voice of the Union' },
+      { name: 'Diplomat',           note: 'Conducts Union foreign affairs' },
+      { name: 'Secretary',          note: 'Records and administration' }
     ]
   },
   {
@@ -363,9 +338,22 @@ const NEWS = [
 ];
 
 /* ───────── STATS BAND ───────── */
+const VIDEO_OF_DAY = null; // paste a YouTube URL (e.g. 'https://www.youtube.com/watch?v=VIDEO_ID') to activate, or null to hide.
+
+const LEADERSHIP = [
+  { title: 'Chancellor',         body: 'Head of the Government' },
+  { title: 'Vice Chancellor',    body: 'Second to the Chancellor' },
+  { title: 'Prime Minister',     body: 'Speaks for the Government' },
+  { title: 'Chief of Staff',     body: 'Runs the Chancellor' },
+  { title: 'Minister',           body: 'Heads a portfolio of state' },
+  { title: 'Propaganda Director',body: 'Voice of the Union' },
+  { title: 'Diplomat',           body: 'Conducts Union foreign affairs' },
+  { title: 'Secretary',          body: 'Records and administration' }
+];
+
 const UNION_STATS = [
   { num: '3',  label: 'Branches of the Union' },
-  { num: '11', label: 'Recognized Divisions' },
+  { num: '9', label: 'Recognized Divisions' },
   { num: '3',  label: 'Seats of the Presidency' },
   { num: '7',  label: 'Official Medals' }
 ];
