@@ -116,7 +116,7 @@ if (videoEmbedEl && videoPlaceholderEl && typeof VIDEO_OF_DAY !== 'undefined' &&
   if (id) {
     videoPlaceholderEl.hidden = true;
     videoEmbedEl.hidden = false;
-    videoEmbedEl.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${esc(id)}" title="Nova Video of the Day" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+    videoEmbedEl.innerHTML = `<iframe src="https://www.youtube.com/embed/${esc(id)}?rel=0&modestbranding=1" title="Nova Video of the Day" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>`;
   }
 }
 

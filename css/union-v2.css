@@ -300,3 +300,5 @@
   text-decoration: none; padding: .35rem .6rem .3rem; white-space: nowrap;
 }
 .nav-yt:hover { background: var(--paper); color: var(--ink); }
+
+[hidden] { display: none !important; }
