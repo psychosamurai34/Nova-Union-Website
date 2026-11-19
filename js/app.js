@@ -108,20 +108,10 @@ if (leadershipEl && typeof LEADERSHIP !== 'undefined') {
 }
 
 /* Video of the day (paste youtube URL in js/data.js → VIDEO_OF_DAY) */
-const videoEmbedEl = $('#videoEmbed');
-const videoPlaceholderEl = $('#videoPlaceholder');
-if (videoEmbedEl && videoPlaceholderEl && typeof VIDEO_OF_DAY !== 'undefined' && VIDEO_OF_DAY) {
-  const m = String(VIDEO_OF_DAY).match(/(?:v=|youtu\.be\/|embed\/)([A-Za-z0-9_-]{6,})/);
-  const id = m && m[1];
-  if (id) {
-    videoPlaceholderEl.hidden = true;
-    videoEmbedEl.hidden = false;
-    // Official embed snippet provided by the owner for pq1Ie9pxyWE
-    const src = (id === 'pq1Ie9pxyWE')
-      ? 'https://www.youtube.com/embed/pq1Ie9pxyWE?si=ozBVDsLY7J9EWK4D'
-      : `https://www.youtube.com/embed/${esc(id)}?rel=0&modestbranding=1`;
-    videoEmbedEl.innerHTML = `<iframe src="${src}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
-  }
+const videoWatchEl = $('#videoWatch');
+if (videoWatchEl && typeof VIDEO_OF_DAY !== 'undefined' && VIDEO_OF_DAY) {
+  videoWatchEl.href = VIDEO_OF_DAY;
+  videoWatchEl.hidden = false;
 }
 
 /* ───────── Social fronts ───────── */
