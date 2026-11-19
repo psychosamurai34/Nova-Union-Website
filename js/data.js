@@ -22,9 +22,9 @@ const NOVA_CONFIG = {
 
 /* ───────── THE 3-PART PRESIDENCY & 2-PART VICE PRESIDENCY ───────── */
 const PRESIDENTS = [
-  { name: 'Napoleon I',    role: 'President' },
-  { name: 'CØƁŘA༒ƝØVÄ',    role: 'President' },
-  { name: 'KÅƤEĐ༒ƝØVÄ',    role: 'President' }
+  { name: 'CØƁŘA༒ƝØVÄ',  role: 'President' },
+  { name: 'KÅƤEĐ༒ƝØVÄ',  role: 'President' },
+  { name: 'Kaiser',      role: 'President' }
 ];
 const VICE_PRESIDENTS = [
   { name: 'MîTTLĘ༒ƝØVÄ',   role: 'Vice President' },
