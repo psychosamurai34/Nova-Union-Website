@@ -116,7 +116,11 @@ if (videoEmbedEl && videoPlaceholderEl && typeof VIDEO_OF_DAY !== 'undefined' &&
   if (id) {
     videoPlaceholderEl.hidden = true;
     videoEmbedEl.hidden = false;
-    videoEmbedEl.innerHTML = `<iframe src="https://www.youtube.com/embed/${esc(id)}?rel=0&modestbranding=1" title="Nova Video of the Day" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+    // Official embed snippet provided by the owner for pq1Ie9pxyWE
+    const src = (id === 'pq1Ie9pxyWE')
+      ? 'https://www.youtube.com/embed/pq1Ie9pxyWE?si=ozBVDsLY7J9EWK4D'
+      : `https://www.youtube.com/embed/${esc(id)}?rel=0&modestbranding=1`;
+    videoEmbedEl.innerHTML = `<iframe src="${src}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
   }
 }
 
