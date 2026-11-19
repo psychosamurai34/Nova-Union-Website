@@ -342,8 +342,8 @@
   background: var(--ink); color: var(--paper); padding: .18rem .45rem .14rem;
 }
 .roster-name {
-  font-family: var(--display); font-size: 1.45rem; letter-spacing: .02em; line-height: 1.1;
-  word-break: break-word;
+  font-family: var(--display); font-size: 1.12rem; letter-spacing: .01em; line-height: 1.18;
+  overflow-wrap: break-word; hyphens: none;
 }
 .roster-meta { display: flex; flex-wrap: wrap; gap: .4rem; }
 .roster-pill {
