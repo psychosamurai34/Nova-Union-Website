@@ -302,3 +302,17 @@
 .nav-yt:hover { background: var(--ink); color: var(--paper); }
 
 [hidden] { display: none !important; }
+
+/* ---------- VIDEO OF THE DAY — full-width watch button ---------- */
+.video-watch {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  aspect-ratio: 16 / 9; width: 100%;
+  background: #0f0f0f; text-decoration: none; color: var(--paper);
+  border: 0; cursor: pointer; transition: all .25s;
+  background-image: radial-gradient(circle at 50% 40%, #221122 0%, #0f0f0f 70%);
+  padding: 2rem; text-align: center;
+}
+.video-watch:hover { background-image: radial-gradient(circle at 50% 40%, #2b1a2b 0%, #141414 70%); }
+.video-watch-kicker { font-family: var(--stencil); font-size: .7rem; letter-spacing: .35em; opacity: .75; margin-bottom: .9rem; }
+.video-watch-title { font-family: var(--display); font-size: clamp(2rem, 8vw, 3.6rem); letter-spacing: .04em; line-height: 1; }
+.video-watch-sub { font-family: var(--body); font-size: .85rem; letter-spacing: .16em; text-transform: uppercase; opacity: .75; margin-top: 1.1rem; }
