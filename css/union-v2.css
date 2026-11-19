@@ -294,11 +294,11 @@
 
 /* ---------- nav youtube pills ---------- */
 .nav-yt {
-  display: inline-flex; align-items: center; gap: .3rem;
-  font-family: var(--stencil); font-weight: 700; font-size: .67rem; letter-spacing: .15em; text-transform: uppercase;
-  color: var(--paper); background: var(--ink); border: 2px solid var(--paper);
-  text-decoration: none; padding: .35rem .6rem .3rem; white-space: nowrap;
+  display: inline-flex; align-items: center; gap: .35rem;
+  font-family: var(--stencil); font-weight: 700; font-size: .82rem; letter-spacing: .15em; text-transform: uppercase;
+  color: var(--ink); background: var(--paper); border: 2px solid var(--ink);
+  text-decoration: none; padding: .22rem .55rem .18rem; white-space: nowrap;
 }
-.nav-yt:hover { background: var(--paper); color: var(--ink); }
+.nav-yt:hover { background: var(--ink); color: var(--paper); }
 
 [hidden] { display: none !important; }
