@@ -108,16 +108,10 @@ if (leadershipEl && typeof LEADERSHIP !== 'undefined') {
 }
 
 /* Video of the day (paste youtube URL in js/data.js → VIDEO_OF_DAY) */
-const videoEmbedEl = $('#videoEmbed');
-const videoPlaceholderEl = $('#videoPlaceholder');
-if (videoEmbedEl && videoPlaceholderEl && typeof VIDEO_OF_DAY !== 'undefined' && VIDEO_OF_DAY) {
-  const m = String(VIDEO_OF_DAY).match(/(?:v=|youtu\.be\/|embed\/)([A-Za-z0-9_-]{6,})/);
-  const id = m && m[1];
-  if (id) {
-    videoPlaceholderEl.hidden = true;
-    videoEmbedEl.hidden = false;
-    videoEmbedEl.innerHTML = `<iframe src="https://www.youtube.com/embed/${esc(id)}?rel=0&modestbranding=1" title="Nova Video of the Day" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>`;
-  }
+const videoWatchEl = $('#videoWatch');
+if (videoWatchEl && typeof VIDEO_OF_DAY !== 'undefined' && VIDEO_OF_DAY) {
+  videoWatchEl.href = VIDEO_OF_DAY;
+  videoWatchEl.hidden = false;
 }
 
 /* ───────── Social fronts ───────── */
