@@ -226,3 +226,7 @@
   letter-spacing: .18em; text-transform: uppercase;
   border-top: 2px solid var(--ink); padding-top: .7rem; margin-top: .7rem;
 }
+
+/* ---------- PSY NOVA wordmark in footer ---------- */
+.foot-mark { text-align: center; margin: 1.2rem 0 1rem; line-height: 0; opacity: .9; }
+.foot-mark img { width: min(420px, 60vw); height: auto; display: block; margin: 0 auto; filter: drop-shadow(0 0 18px rgba(255,255,255,.22)); }
