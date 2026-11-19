@@ -338,7 +338,7 @@ const NEWS = [
 ];
 
 /* ───────── STATS BAND ───────── */
-const VIDEO_OF_DAY = 'https://www.youtube.com/watch?v=pq1Ie9pxyWE'; // paste a YouTube URL to swap, or null to hide
+const VIDEO_OF_DAY = 'https://youtu.be/pq1Ie9pxyWE?si=IWpT85rQDoyh7FRz'; // paste a YouTube URL to swap, or null to hide
 
 const LEADERSHIP = [
   { title: 'Chancellor',         body: 'Head of the Government' },
