@@ -6,7 +6,7 @@
 
 const NOVA_CONFIG = {
   motto: 'UNITED WE STAND STRONG',              // official Union motto
-  sealMotto: 'STRENGTH THROUGH UNITY',          // inscribed on the Nova Union seal
+  sealMotto: 'STRENGTH THROUGH UNITY',          // inscribed on the Union seal
   lastUpdated: '11/16/2026',                    // last content update
   foundingNote: 'A re-established militarized nation of VRChat',
   discordMain:   'https://discord.gg/7Ys67AcBm2',
@@ -22,9 +22,9 @@ const NOVA_CONFIG = {
 
 /* ───────── THE 3-PART PRESIDENCY & 2-PART VICE PRESIDENCY ───────── */
 const PRESIDENTS = [
-  { name: 'CØƁŘA༒ƝØVÄ',  role: 'President' },
-  { name: 'KÅƤEĐ༒ƝØVÄ',  role: 'President' },
-  { name: 'Kaiser',      role: 'President' }
+  { name: 'Napoleon I',    role: 'President' },
+  { name: 'CØƁŘA༒ƝØVÄ',    role: 'President' },
+  { name: 'KÅƤEĐ༒ƝØVÄ',    role: 'President' }
 ];
 const VICE_PRESIDENTS = [
   { name: 'MîTTLĘ༒ƝØVÄ',   role: 'Vice President' },
@@ -34,9 +34,9 @@ const VICE_PRESIDENTS = [
 /* ───────── ORDER OF BATTLE (org tree) ───────── */
 // Three top-level branches. children reference FACTIONS ids.
 const ORG_TREE = [
-  { branch: 'THE NOVA GOVERNMENT', blurb: 'Supreme governing authority of the Nova Union', children: ['government', 'agency'] },
+  { branch: 'THE NOVA GOVERNMENT', blurb: 'Supreme governing authority of the Union', children: ['government', 'agency', 'coalition'] },
   { branch: 'THE NOVA BRIGADE',    blurb: 'The Union\u2019s military fighting force',   children: ['brigade', 'armored', 'medics'] },
-  { branch: 'THE NOVA LEGION',     blurb: 'Elite force of the Nova Union\u2019s order',       children: ['legion', 'reapers', 'guards', 'police'] }
+  { branch: 'THE NOVA LEGION',     blurb: 'Elite force of the Union\u2019s order',       children: ['legion', 'reapers', 'guards', 'police', 'holland'] }
 ];
 
 /* ───────── FACTIONS (divisions) ───────── */
@@ -61,10 +61,18 @@ const FACTIONS = [
     docs: [], discord: 'discordAgency'
   },
   {
+    id: 'coalition', name: 'The Nova Coalition', branch: 'THE NOVA GOVERNMENT',
+    initials: 'NC', sealHint: 'TORCH', emblem: 'assets/emblems/coalition.png',
+    mandate: 'The Nova Coalition is an international organization established under the leadership and authority of The Nova Union, designed to unite multiple independent groups, organizations, and affiliated nations under one centralized system of cooperation, administration, and leadership.',
+    structure: 'An international arm of the Union — independent groups cooperate under one centralized system of administration and leadership.',
+    eligibility: 'By establishment of the Nova Government. No public rank minimum.',
+    docs: [], discord: null
+  },
+  {
     id: 'brigade', name: 'The Nova Brigade', branch: 'THE NOVA BRIGADE',
     initials: 'NB', sealHint: 'KNOT-STAR', emblem: 'assets/emblems/brigade.png',
     mandate: 'The Nova Brigade is a specialized military formation within the Nova Union, composed of disciplined and dedicated personnel trained to operate as a cohesive fighting force. The Brigade focuses on military training, coordinated operations, tactical exercises, and mission readiness.',
-    structure: 'The primary military formation of the Nova Union. All recruits begin here under the Recruitment Manual.',
+    structure: 'The primary military formation of the Union. All recruits begin here under the Recruitment Manual.',
     eligibility: 'Open entry — complete Basic Training under the official Recruitment Manual.',
     docs: [{ label: 'Nova Union Recruitment Manual', href: 'docs/recruitment-manual.md' }], discord: null
   },
@@ -72,7 +80,7 @@ const FACTIONS = [
     id: 'armored', name: 'The Nova Armored', branch: 'THE NOVA BRIGADE',
     initials: 'NVA', sealHint: 'TANK', emblem: 'assets/emblems/armored.png',
     mandate: 'The Nova Armored commands the tanks and armored vehicles of the Nova Union, delivering overwhelming firepower, heavy protection, and decisive battlefield support. Through disciplined crews, coordinated maneuvers, and armored warfare expertise, they spearhead assaults, reinforce allied forces, and defend the strength and unity of the Nova Union.',
-    structure: 'Division of The Nova Brigade. Tanks and armored vehicles of the Nova Union.',
+    structure: 'Division of The Nova Brigade. Tanks and armored vehicles of the Union.',
     eligibility: 'Minimum Rank: E-4 — Members must hold the rank of E-4 or higher to be eligible to join the Nova Armored.',
     docs: [], discord: null
   },
@@ -80,7 +88,7 @@ const FACTIONS = [
     id: 'medics', name: 'The Nova Medics', branch: 'THE NOVA BRIGADE',
     initials: 'NM', sealHint: 'STAR-OF-LIFE', emblem: 'assets/emblems/medics.png',
     mandate: 'The Nova Medics provides essential medical support, treating wounded personnel, saving lives, and ensuring the readiness of Nova Union forces. Through skilled medical care, rapid battlefield response, and unwavering dedication, they safeguard the lives of their comrades and uphold the strength and unity of the Nova Union.',
-    structure: 'Division of The Nova Brigade. Combat medical support for the Nova Union.',
+    structure: 'Division of The Nova Brigade. Combat medical support for the Union.',
     eligibility: 'Minimum Rank: E-2 — Members must hold the rank of E-2 or higher to be eligible to join the Medics.',
     docs: [], discord: null
   },
@@ -115,6 +123,14 @@ const FACTIONS = [
     structure: 'Division of The Nova Legion — justice, discipline, and internal security.',
     eligibility: 'Minimum Rank: E-5 — Members must hold the rank of E-5 or higher to be eligible to join the Nova Police.',
     docs: [], discord: 'discordMP'
+  },
+  {
+    id: 'holland', name: 'The Nova Holland', branch: 'THE NOVA LEGION',
+    initials: 'NH', sealHint: 'QUESTION', emblem: 'assets/emblems/holland.png',
+    mandate: 'The Nova Holland — record pending. Listed in the official Union order of battle under The Nova Legion as of 11/13/2026. Full mandate to be published by the Government.',
+    structure: 'Division of The Nova Legion. Mandate pending publication.',
+    eligibility: 'Record pending — await official Government announcement.',
+    docs: [], discord: null
   }
 ];
 
@@ -122,29 +138,38 @@ const FACTIONS = [
 const FACTION_MOTTOS = {
   government: 'AUTHORITY THROUGH UNITY',
   agency:     'ORDER THROUGH INTELLIGENCE',
+  coalition:  'ORDER THROUGH INTELLIGENCE',
   brigade:    'DUTY WITHOUT COMPROMISE',
   armored:    'IRON RESOLVE. UNSTOPPABLE FORCE',
   medics:     'THROUGH CHAOS WE BRING HOPE',
   legion:     'ORDER IS OUR STRENGTH',
   reapers:    'WE REAP WHAT OTHERS FEAR',
   guards:     'WE GUARD WHAT OTHERS CANNOT',
-  police:     'UPHOLDING ORDER DEFENDING HONOR'
+  police:     'UPHOLDING ORDER DEFENDING HONOR',
+  holland:    'RECORD PENDING'
 };
 
 /* ───────── UNION-WIDE RANK LADDER (retired — see RANK_GROUPS) ───────── */
 /* ───────── RANK STRUCTURE (official, last updated 11/11/2026) ───────── */
 const RANK_GROUPS = [
   {
-    group: 'GOVERNMENT', blurb: 'The official order of the Nova Union executive',
+    group: 'LEADERSHIP', blurb: 'The summit of the Union',
     rows: [
-      { name: 'Chancellor',         note: 'Head of the Government' },
-      { name: 'Vice Chancellor',    note: 'Second to the Chancellor' },
-      { name: 'Prime Minister',     note: 'Speaks for the Government' },
-      { name: 'Chief of Staff',     note: 'Runs the Chancellor’s office' },
-      { name: 'Minister',           note: 'Heads a portfolio of state' },
-      { name: 'Propaganda Director',note: 'Voice of the Nova Union' },
-      { name: 'Diplomat',           note: 'Conducts Union foreign affairs' },
-      { name: 'Secretary',          note: 'Records and administration' }
+      { name: 'President',       note: 'Three-part presidency' },
+      { name: 'Vice President',  note: 'Two-part vice presidency' },
+      { name: 'Chancellor',      note: 'Senior civilian office' },
+      { name: 'Vice-Chancellor', note: 'Next to the Chancellor' }
+    ]
+  },
+  {
+    group: 'GOVERNMENT', blurb: 'Six grades of state authority',
+    rows: [
+      { name: 'G-6 Prime Minister',    note: 'Speaks for the Government' },
+      { name: 'G-5 Minister',          note: 'Heads a portfolio of state' },
+      { name: 'G-4 Advisor',           note: 'Counsel to the Government' },
+      { name: 'G-3 Campaign Officer',  note: 'Runs official events' },
+      { name: 'G-2 Government Officer',note: 'Executive arm of the state' },
+      { name: 'G-1 Secretary',         note: 'Records and administration' }
     ]
   },
   {
@@ -166,7 +191,7 @@ const RANK_GROUPS = [
     ]
   },
   {
-    group: 'OFFICERS', blurb: 'Commissioned command of the Nova Union',
+    group: 'OFFICERS', blurb: 'Commissioned command of the Union',
     rows: [
       { name: 'O-7 Colonel',            note: 'Senior field officer' },
       { name: 'O-6 Lieutenant Colonel', note: 'Field grade' },
@@ -178,7 +203,7 @@ const RANK_GROUPS = [
     ]
   },
   {
-    group: 'ENLISTED', blurb: 'The backbone of the Nova Union',
+    group: 'ENLISTED', blurb: 'The backbone of the Union',
     rows: [
       { name: 'E-10 Sergeant Major',      note: 'Senior enlisted advisor' },
       { name: 'E-9 Senior Master Sergeant', note: 'Senior enlisted leader' },
@@ -211,22 +236,22 @@ const MEDALS = [
   {
     name: 'Grand Star of the Nova Union', tier: 'GRAND STAR', level: 7,
     summary: 'The highest decoration awarded by the Nova Union.',
-    earn: ['Demonstrate extraordinary dedication to the Nova Union.', 'Make an exceptional contribution to development.', 'Display outstanding leadership and commitment.', 'Be nominated by the President.']
+    earn: ['Demonstrate extraordinary dedication to the Union.', 'Make an exceptional contribution to development.', 'Display outstanding leadership and commitment.', 'Be nominated by the President.']
   },
   {
     name: 'Star of Distinguished Service', tier: 'STAR', level: 6,
     summary: 'Recognizes exceptional service to the government, military, or other Union institutions.',
-    earn: ['Consistently perform duties exceptionally well.', 'Serve the Nova Union with distinction.', 'Make significant improvements to an institution or department.', 'Receive an official recommendation from leadership.']
+    earn: ['Consistently perform duties exceptionally well.', 'Serve the Union with distinction.', 'Make significant improvements to an institution or department.', 'Receive an official recommendation from leadership.']
   },
   {
     name: 'Star of Exceptional Merit', tier: 'STAR', level: 5,
     summary: 'Recognizes outstanding achievements that benefit the Nova Union.',
-    earn: ['Accomplish something exceptionally beneficial to the Nova Union.', 'Organize successful major events or projects.', 'Introduce valuable ideas or reforms.', 'Demonstrate exceptional initiative.']
+    earn: ['Accomplish something exceptionally beneficial to the Union.', 'Organize successful major events or projects.', 'Introduce valuable ideas or reforms.', 'Demonstrate exceptional initiative.']
   },
   {
     name: 'Star of Valor', tier: 'STAR', level: 4,
     summary: 'Recognizes extraordinary courage, integrity, and selflessness.',
-    earn: ['Demonstrate courage in a difficult situation.', 'Stand up for members facing unfair treatment.', 'Protect the reputation and interests of the Nova Union through responsible actions.', 'Put the wellbeing of the community before personal recognition.']
+    earn: ['Demonstrate courage in a difficult situation.', 'Stand up for members facing unfair treatment.', 'Protect the reputation and interests of the Union through responsible actions.', 'Put the wellbeing of the community before personal recognition.']
   },
   {
     name: 'Silver Star of Excellence', tier: 'SILVER STAR', level: 3,
@@ -241,30 +266,29 @@ const MEDALS = [
   {
     name: 'Bronze Star of Dedication', tier: 'BRONZE STAR', level: 1,
     summary: 'Recognizes members who demonstrate dedication and make meaningful contributions to the Nova Union.',
-    earn: ['Demonstrate a positive attitude toward the Nova Union.', 'Assist with activities and community projects.', 'Show willingness to help other members.', 'Demonstrate commitment to their responsibilities.']
+    earn: ['Demonstrate a positive attitude toward the Union.', 'Assist with activities and community projects.', 'Show willingness to help other members.', 'Demonstrate commitment to their responsibilities.']
   }
 ];
 
 /* ───────── NATIONAL HONORS — this week\u2019s roll [PLACEHOLDER] ───────── */
 const HONOREES = [
-  { name: 'ŁØǦǦÏÅ༒ƝØVÄ',    rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: '-Formula-',       rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: 'Terminator1234y', rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: 'ҠƝƗƓĦŦ༒ƝØVÄ',     rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: 'Mædīšøn༒Ñøvå',    rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: 'Vøłŧɇɍs̷øł',       rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: 'Everest_moss',    rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: 'Maria178',        rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: 'Gojo157',         rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: '༒ᴅᴀʙɪᴇᴛᴛᴜʀᴛʟᴇ༒',  rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' }
+  { name: 'Reaper-6',      rank: 'E-6 Sergeant',       citation: 'Held the line at Kessler Ridge when the order wavered.' },
+  { name: 'Vera Kestrel',  rank: 'E-5 Corporal',       citation: 'Dragged two wounded operators through crossfire without a scratch.' },
+  { name: 'Ironledger',    rank: 'G-3 Campaign Officer', citation: 'Resupplied three squads through a storm the map said was impassable.' },
+  { name: 'Domino',        rank: 'E-1 Recruit',        citation: 'Never missed a training. Not once. Not ever.' },
+  { name: 'Ashfall',       rank: 'TNA-2 Intelligence Officer', citation: 'Coordinated the extraction under total comms blackout.' },
+  { name: 'Mother Mercy',  rank: 'O-5 Major',          citation: 'Medevac chain held through the heaviest barrage of the season.' },
+  { name: 'Longwatch',     rank: 'E-2 Private',        citation: 'Nine confirmed from a single overwatch position. Unseen. Unheard.' },
+  { name: 'Static',        rank: 'TNA-1 Field Agent',  citation: 'Rebuilt the net in 4 minutes after a direct strike on comms.' },
+  { name: 'Old Barley',    rank: 'O-7 Colonel',        citation: 'Mentored 14 recruits to full qualification this cycle alone.' },
+  { name: 'Threnody',      rank: 'E-4 Specialist',     citation: 'Planted the Union star at the Hollow Relay under fire.' }
 ];
-;
 
 /* ───────── UNION WIRE announcements ───────── */
 const ANNOUNCEMENTS = [
-  { tag: 'NATIONAL HONORS', date: 'EVERY THURSDAY', text: 'National Honors convenes Thursday — ten names will be called before the Nova Union.' },
+  { tag: 'NATIONAL HONORS', date: 'EVERY THURSDAY', text: 'National Honors convenes Thursday — ten names will be called before the Union.' },
   { tag: 'LEGION ACT',      date: 'IN EFFECT',      text: 'The Legion ACT is official doctrine for all Legion divisions — size, ranks, uniform, loyalty and conduct.' },
-  { tag: 'RECRUITMENT',     date: 'NOW',            text: 'Open intake across all divisions. Represent the Nova Brigade, join the Nova Union and Brigade groups, and report for training.' },
+  { tag: 'RECRUITMENT',     date: 'NOW',            text: 'Open intake across all divisions. Represent the Nova Brigade, join the Union and Brigade groups, and report for training.' },
   { tag: 'PROMOTION STANDARDS', date: 'NOW IN EFFECT', text: 'Enlisted once every 2 days - Officers every 5 - Generals every 7 - only the three Presidents may promote. Performance promotes. Demotions are enforced.' }
 ];
 
@@ -286,7 +310,7 @@ const NEWS = [
     headline: 'Rank Requirements for All Divisions Published',
     dek: 'Navy E-2 · Medics E-2 · Armored E-4 · Police E-5 · Guards E-6 · Agency E-6 · Reapers & Government: Hand Selected.',
     body: [
-      'The Nova Government has published the official minimum rank requirements for entry into every division of the Nova Union, last updated 11/11/2026.',
+      'The Nova Government has published the official minimum rank requirements for entry into every division of the Union, last updated 11/11/2026.',
       'Prospective members of the Nova Navy and the Medics require E-2; the Nova Armored E-4; the Nova Police E-5; the Royal Guards and the Agency E-6. The Reapers and all Government positions are filled by direct, hand selection.',
       'Members are reminded that misrepresenting qualifications is a dismissal offense under Union doctrine.'
     ],
@@ -298,7 +322,7 @@ const NEWS = [
     dek: 'Seven decorations, from the Bronze Star of Dedication to the Grand Star of the Nova Union.',
     body: [
       'By order of the Presidency, the complete Nova Union Medals registry has been published. Seven decorations are awarded: the Grand Star of the Nova Union, the Star of Distinguished Service, the Star of Exceptional Merit, the Star of Valor, the Silver Star of Excellence, the Silver Star of Commitment, and the Bronze Star of Dedication.',
-      'The Grand Star — the highest decoration of the Nova Union — is conferred only upon nomination by the President. The Bronze Star of Dedication is open to any member who shows up, stands tall, and honors the Nova Union.',
+      'The Grand Star — the highest decoration of the Union — is conferred only upon nomination by the President. The Bronze Star of Dedication is open to any member who shows up, stands tall, and honors the Union.',
       'Medal design and registry maintained by ƇΉΙΡ༒ƝØVÄ.'
     ],
     sign: '— Nova Union Medals Registry'
@@ -324,37 +348,13 @@ const NEWS = [
       'Demotions - Officers and Generals who cannot do their job(s) will be demoted from now on. Generals and Senior Officers MUST train and enhance new officers to be productive, or they will be demoted.'
     ],
     sign: 'Forever Loyal, Forever Nova — Your Vice Chancellor, ƇΉΙΡ༒ƝØVÄ'
-  },
-  {
-    id: 'n6', cat: 'NATIONAL HONORS', date: 'NOV 12, 2026',
-    headline: 'National Honors — Week of November 12, 2026',
-    dek: 'Ten names called before the Nova Union — official issue under the Presidency.',
-    body: [
-      'By order of the Presidency, the Weekly National Honors recognize individuals who have demonstrated outstanding dedication, activity, professionalism, loyalty, and meaningful contributions to the Nova Union.',
-      'This week\'s honorees: Mark H Botkin, ĎĴ༒ƝØVÄ, ᴇᴠᴀɴᴠʀ, ĄŘAƁ༒ƝØVÄ, me21 6f53, Shadow McLaren, Mr-reaper73, ༒Mr Ðårk༒, Foxxy Chiller, x_Bass_x.',
-      'National Honors convenes every Thursday. If you are not recognized this week, keep your head up — next Thursday is always a new draw.'
-    ],
-    sign: '— By Order of the Presidency, KÅƤEĐ༒ƝØVÄ'
   }
 ];
 
 /* ───────── STATS BAND ───────── */
-const VIDEO_OF_DAY = 'https://youtu.be/pq1Ie9pxyWE?si=IWpT85rQDoyh7FRz'; // paste a YouTube URL to swap, or null to hide
-
-const LEADERSHIP = [
-  { title: 'Chancellor',         body: 'Head of the Government' },
-  { title: 'Vice Chancellor',    body: 'Second to the Chancellor' },
-  { title: 'Prime Minister',     body: 'Speaks for the Government' },
-  { title: 'Chief of Staff',     body: 'Runs the Chancellor' },
-  { title: 'Minister',           body: 'Heads a portfolio of state' },
-  { title: 'Propaganda Director',body: 'Voice of the Nova Union' },
-  { title: 'Diplomat',           body: 'Conducts Union foreign affairs' },
-  { title: 'Secretary',          body: 'Records and administration' }
-];
-
 const UNION_STATS = [
-  { num: '3',  label: 'Branches of the Nova Union' },
-  { num: '9', label: 'Recognized Divisions' },
+  { num: '3',  label: 'Branches of the Union' },
+  { num: '11', label: 'Recognized Divisions' },
   { num: '3',  label: 'Seats of the Presidency' },
   { num: '7',  label: 'Official Medals' }
 ];
