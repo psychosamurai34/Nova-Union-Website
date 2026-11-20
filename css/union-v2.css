@@ -378,3 +378,30 @@
   .roster-grid { grid-template-columns: 1fr; }
   .roster-card { box-shadow: 4px 4px 0 var(--ink); }
 }
+
+/* ---------- nav brand one line fix ---------- */
+.nav-word { white-space: nowrap; }
+.roster-grid-centered { justify-content: center; }
+/* ---------- ideology + history + video text ---------- */
+.ideology-copy, .history-copy { max-width: 70ch; line-height: 1.7; font-size: 1.02rem; }
+.ideology-copy p, .history-copy p { margin: 0 0 1.1rem; }
+.ideology-motto, .history-motto { text-align: center; font-family: var(--stencil); letter-spacing: .18em; margin-top: 1.5rem; }
+
+/* ---------- final layout fixes ---------- */
+/* Center faction groups + division cards */
+#factionGroups, .faction-groups-centered { width: 100%; }
+.faction-group { width: 100%; }
+.faction-group .division-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+.faction-group .division-card { flex: 0 1 320px; }
+.faction-group .faction-branch { text-align: center; }
+/* Center 2-card grids (Gov Command, High Command) */
+.roster-grid-centered { justify-content: center; }
+/* Ideology + History readable */
+.ideology-copy, .history-copy { max-width: 72ch; margin: 0 auto; line-height: 1.75; font-size: 1.02rem; }
+.ideology-copy p, .history-copy p { margin: 0 0 1.15rem; }
+.ideology-motto, .history-motto { text-align: center; font-family: var(--stencil); letter-spacing: .2em; margin-top: 1.5rem; }
+/* Nav brand single line */
+.nav-word { white-space: nowrap; }
+/* Honors document image */
+.honors-document img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.honors-document figcaption { text-align: center; font-family: var(--stencil); font-size: .72rem; letter-spacing: .12em; margin-top: .75rem; opacity: .8; }
