@@ -6,7 +6,7 @@
 
 const NOVA_CONFIG = {
   motto: 'UNITED WE STAND STRONG',              // official Union motto
-  sealMotto: 'STRENGTH THROUGH UNITY',          // inscribed on the Union seal
+  sealMotto: 'STRENGTH THROUGH UNITY',          // inscribed on the Nova Union seal
   lastUpdated: '11/16/2026',                    // last content update
   foundingNote: 'A re-established militarized nation of VRChat',
   discordMain:   'https://discord.gg/7Ys67AcBm2',
@@ -34,9 +34,9 @@ const VICE_PRESIDENTS = [
 /* ───────── ORDER OF BATTLE (org tree) ───────── */
 // Three top-level branches. children reference FACTIONS ids.
 const ORG_TREE = [
-  { branch: 'THE NOVA GOVERNMENT', blurb: 'Supreme governing authority of the Union', children: ['government', 'agency'] },
+  { branch: 'THE NOVA GOVERNMENT', blurb: 'Supreme governing authority of the Nova Union', children: ['government', 'agency'] },
   { branch: 'THE NOVA BRIGADE',    blurb: 'The Union\u2019s military fighting force',   children: ['brigade', 'armored', 'medics'] },
-  { branch: 'THE NOVA LEGION',     blurb: 'Elite force of the Union\u2019s order',       children: ['legion', 'reapers', 'guards', 'police'] }
+  { branch: 'THE NOVA LEGION',     blurb: 'Elite force of the Nova Union\u2019s order',       children: ['legion', 'reapers', 'guards', 'police'] }
 ];
 
 /* ───────── FACTIONS (divisions) ───────── */
@@ -64,7 +64,7 @@ const FACTIONS = [
     id: 'brigade', name: 'The Nova Brigade', branch: 'THE NOVA BRIGADE',
     initials: 'NB', sealHint: 'KNOT-STAR', emblem: 'assets/emblems/brigade.png',
     mandate: 'The Nova Brigade is a specialized military formation within the Nova Union, composed of disciplined and dedicated personnel trained to operate as a cohesive fighting force. The Brigade focuses on military training, coordinated operations, tactical exercises, and mission readiness.',
-    structure: 'The primary military formation of the Union. All recruits begin here under the Recruitment Manual.',
+    structure: 'The primary military formation of the Nova Union. All recruits begin here under the Recruitment Manual.',
     eligibility: 'Open entry — complete Basic Training under the official Recruitment Manual.',
     docs: [{ label: 'Nova Union Recruitment Manual', href: 'docs/recruitment-manual.md' }], discord: null
   },
@@ -72,7 +72,7 @@ const FACTIONS = [
     id: 'armored', name: 'The Nova Armored', branch: 'THE NOVA BRIGADE',
     initials: 'NVA', sealHint: 'TANK', emblem: 'assets/emblems/armored.png',
     mandate: 'The Nova Armored commands the tanks and armored vehicles of the Nova Union, delivering overwhelming firepower, heavy protection, and decisive battlefield support. Through disciplined crews, coordinated maneuvers, and armored warfare expertise, they spearhead assaults, reinforce allied forces, and defend the strength and unity of the Nova Union.',
-    structure: 'Division of The Nova Brigade. Tanks and armored vehicles of the Union.',
+    structure: 'Division of The Nova Brigade. Tanks and armored vehicles of the Nova Union.',
     eligibility: 'Minimum Rank: E-4 — Members must hold the rank of E-4 or higher to be eligible to join the Nova Armored.',
     docs: [], discord: null
   },
@@ -80,7 +80,7 @@ const FACTIONS = [
     id: 'medics', name: 'The Nova Medics', branch: 'THE NOVA BRIGADE',
     initials: 'NM', sealHint: 'STAR-OF-LIFE', emblem: 'assets/emblems/medics.png',
     mandate: 'The Nova Medics provides essential medical support, treating wounded personnel, saving lives, and ensuring the readiness of Nova Union forces. Through skilled medical care, rapid battlefield response, and unwavering dedication, they safeguard the lives of their comrades and uphold the strength and unity of the Nova Union.',
-    structure: 'Division of The Nova Brigade. Combat medical support for the Union.',
+    structure: 'Division of The Nova Brigade. Combat medical support for the Nova Union.',
     eligibility: 'Minimum Rank: E-2 — Members must hold the rank of E-2 or higher to be eligible to join the Medics.',
     docs: [], discord: null
   },
@@ -135,14 +135,14 @@ const FACTION_MOTTOS = {
 /* ───────── RANK STRUCTURE (official, last updated 11/11/2026) ───────── */
 const RANK_GROUPS = [
   {
-    group: 'GOVERNMENT', blurb: 'The official order of the Union executive',
+    group: 'GOVERNMENT', blurb: 'The official order of the Nova Union executive',
     rows: [
       { name: 'Chancellor',         note: 'Head of the Government' },
       { name: 'Vice Chancellor',    note: 'Second to the Chancellor' },
       { name: 'Prime Minister',     note: 'Speaks for the Government' },
       { name: 'Chief of Staff',     note: 'Runs the Chancellor’s office' },
       { name: 'Minister',           note: 'Heads a portfolio of state' },
-      { name: 'Propaganda Director',note: 'Voice of the Union' },
+      { name: 'Propaganda Director',note: 'Voice of the Nova Union' },
       { name: 'Diplomat',           note: 'Conducts Union foreign affairs' },
       { name: 'Secretary',          note: 'Records and administration' }
     ]
@@ -166,7 +166,7 @@ const RANK_GROUPS = [
     ]
   },
   {
-    group: 'OFFICERS', blurb: 'Commissioned command of the Union',
+    group: 'OFFICERS', blurb: 'Commissioned command of the Nova Union',
     rows: [
       { name: 'O-7 Colonel',            note: 'Senior field officer' },
       { name: 'O-6 Lieutenant Colonel', note: 'Field grade' },
@@ -178,7 +178,7 @@ const RANK_GROUPS = [
     ]
   },
   {
-    group: 'ENLISTED', blurb: 'The backbone of the Union',
+    group: 'ENLISTED', blurb: 'The backbone of the Nova Union',
     rows: [
       { name: 'E-10 Sergeant Major',      note: 'Senior enlisted advisor' },
       { name: 'E-9 Senior Master Sergeant', note: 'Senior enlisted leader' },
@@ -211,22 +211,22 @@ const MEDALS = [
   {
     name: 'Grand Star of the Nova Union', tier: 'GRAND STAR', level: 7,
     summary: 'The highest decoration awarded by the Nova Union.',
-    earn: ['Demonstrate extraordinary dedication to the Union.', 'Make an exceptional contribution to development.', 'Display outstanding leadership and commitment.', 'Be nominated by the President.']
+    earn: ['Demonstrate extraordinary dedication to the Nova Union.', 'Make an exceptional contribution to development.', 'Display outstanding leadership and commitment.', 'Be nominated by the President.']
   },
   {
     name: 'Star of Distinguished Service', tier: 'STAR', level: 6,
     summary: 'Recognizes exceptional service to the government, military, or other Union institutions.',
-    earn: ['Consistently perform duties exceptionally well.', 'Serve the Union with distinction.', 'Make significant improvements to an institution or department.', 'Receive an official recommendation from leadership.']
+    earn: ['Consistently perform duties exceptionally well.', 'Serve the Nova Union with distinction.', 'Make significant improvements to an institution or department.', 'Receive an official recommendation from leadership.']
   },
   {
     name: 'Star of Exceptional Merit', tier: 'STAR', level: 5,
     summary: 'Recognizes outstanding achievements that benefit the Nova Union.',
-    earn: ['Accomplish something exceptionally beneficial to the Union.', 'Organize successful major events or projects.', 'Introduce valuable ideas or reforms.', 'Demonstrate exceptional initiative.']
+    earn: ['Accomplish something exceptionally beneficial to the Nova Union.', 'Organize successful major events or projects.', 'Introduce valuable ideas or reforms.', 'Demonstrate exceptional initiative.']
   },
   {
     name: 'Star of Valor', tier: 'STAR', level: 4,
     summary: 'Recognizes extraordinary courage, integrity, and selflessness.',
-    earn: ['Demonstrate courage in a difficult situation.', 'Stand up for members facing unfair treatment.', 'Protect the reputation and interests of the Union through responsible actions.', 'Put the wellbeing of the community before personal recognition.']
+    earn: ['Demonstrate courage in a difficult situation.', 'Stand up for members facing unfair treatment.', 'Protect the reputation and interests of the Nova Union through responsible actions.', 'Put the wellbeing of the community before personal recognition.']
   },
   {
     name: 'Silver Star of Excellence', tier: 'SILVER STAR', level: 3,
@@ -241,29 +241,30 @@ const MEDALS = [
   {
     name: 'Bronze Star of Dedication', tier: 'BRONZE STAR', level: 1,
     summary: 'Recognizes members who demonstrate dedication and make meaningful contributions to the Nova Union.',
-    earn: ['Demonstrate a positive attitude toward the Union.', 'Assist with activities and community projects.', 'Show willingness to help other members.', 'Demonstrate commitment to their responsibilities.']
+    earn: ['Demonstrate a positive attitude toward the Nova Union.', 'Assist with activities and community projects.', 'Show willingness to help other members.', 'Demonstrate commitment to their responsibilities.']
   }
 ];
 
 /* ───────── NATIONAL HONORS — this week\u2019s roll [PLACEHOLDER] ───────── */
 const HONOREES = [
-  { name: 'Mark H Botkin',  rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: 'ĎĴ༒ƝØVÄ',       rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: 'ᴇᴠᴀɴᴠʀ',         rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: 'ĄŘAƁ༒ƝØVÄ',      rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: 'me21 6f53',      rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: 'Shadow McLaren', rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: 'Mr-reaper73',    rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: '༒Mr Ðårk༒',      rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: 'Foxxy Chiller',  rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: 'x_Bass_x',       rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' }
+  { name: 'ŁØǦǦÏÅ༒ƝØVÄ',    rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
+  { name: '-Formula-',       rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
+  { name: 'Terminator1234y', rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
+  { name: 'ҠƝƗƓĦŦ༒ƝØVÄ',     rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
+  { name: 'Mædīšøn༒Ñøvå',    rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
+  { name: 'Vøłŧɇɍs̷øł',       rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
+  { name: 'Everest_moss',    rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
+  { name: 'Maria178',        rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
+  { name: 'Gojo157',         rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
+  { name: '༒ᴅᴀʙɪᴇᴛᴛᴜʀᴛʟᴇ༒',  rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' }
 ];
+;
 
 /* ───────── UNION WIRE announcements ───────── */
 const ANNOUNCEMENTS = [
-  { tag: 'NATIONAL HONORS', date: 'EVERY THURSDAY', text: 'National Honors convenes Thursday — ten names will be called before the Union.' },
+  { tag: 'NATIONAL HONORS', date: 'EVERY THURSDAY', text: 'National Honors convenes Thursday — ten names will be called before the Nova Union.' },
   { tag: 'LEGION ACT',      date: 'IN EFFECT',      text: 'The Legion ACT is official doctrine for all Legion divisions — size, ranks, uniform, loyalty and conduct.' },
-  { tag: 'RECRUITMENT',     date: 'NOW',            text: 'Open intake across all divisions. Represent the Nova Brigade, join the Union and Brigade groups, and report for training.' },
+  { tag: 'RECRUITMENT',     date: 'NOW',            text: 'Open intake across all divisions. Represent the Nova Brigade, join the Nova Union and Brigade groups, and report for training.' },
   { tag: 'PROMOTION STANDARDS', date: 'NOW IN EFFECT', text: 'Enlisted once every 2 days - Officers every 5 - Generals every 7 - only the three Presidents may promote. Performance promotes. Demotions are enforced.' }
 ];
 
@@ -285,7 +286,7 @@ const NEWS = [
     headline: 'Rank Requirements for All Divisions Published',
     dek: 'Navy E-2 · Medics E-2 · Armored E-4 · Police E-5 · Guards E-6 · Agency E-6 · Reapers & Government: Hand Selected.',
     body: [
-      'The Nova Government has published the official minimum rank requirements for entry into every division of the Union, last updated 11/11/2026.',
+      'The Nova Government has published the official minimum rank requirements for entry into every division of the Nova Union, last updated 11/11/2026.',
       'Prospective members of the Nova Navy and the Medics require E-2; the Nova Armored E-4; the Nova Police E-5; the Royal Guards and the Agency E-6. The Reapers and all Government positions are filled by direct, hand selection.',
       'Members are reminded that misrepresenting qualifications is a dismissal offense under Union doctrine.'
     ],
@@ -297,7 +298,7 @@ const NEWS = [
     dek: 'Seven decorations, from the Bronze Star of Dedication to the Grand Star of the Nova Union.',
     body: [
       'By order of the Presidency, the complete Nova Union Medals registry has been published. Seven decorations are awarded: the Grand Star of the Nova Union, the Star of Distinguished Service, the Star of Exceptional Merit, the Star of Valor, the Silver Star of Excellence, the Silver Star of Commitment, and the Bronze Star of Dedication.',
-      'The Grand Star — the highest decoration of the Union — is conferred only upon nomination by the President. The Bronze Star of Dedication is open to any member who shows up, stands tall, and honors the Union.',
+      'The Grand Star — the highest decoration of the Nova Union — is conferred only upon nomination by the President. The Bronze Star of Dedication is open to any member who shows up, stands tall, and honors the Nova Union.',
       'Medal design and registry maintained by ƇΉΙΡ༒ƝØVÄ.'
     ],
     sign: '— Nova Union Medals Registry'
@@ -327,7 +328,7 @@ const NEWS = [
   {
     id: 'n6', cat: 'NATIONAL HONORS', date: 'NOV 12, 2026',
     headline: 'National Honors — Week of November 12, 2026',
-    dek: 'Ten names called before the Union — official issue under the Presidency.',
+    dek: 'Ten names called before the Nova Union — official issue under the Presidency.',
     body: [
       'By order of the Presidency, the Weekly National Honors recognize individuals who have demonstrated outstanding dedication, activity, professionalism, loyalty, and meaningful contributions to the Nova Union.',
       'This week\'s honorees: Mark H Botkin, ĎĴ༒ƝØVÄ, ᴇᴠᴀɴᴠʀ, ĄŘAƁ༒ƝØVÄ, me21 6f53, Shadow McLaren, Mr-reaper73, ༒Mr Ðårk༒, Foxxy Chiller, x_Bass_x.',
@@ -346,13 +347,13 @@ const LEADERSHIP = [
   { title: 'Prime Minister',     body: 'Speaks for the Government' },
   { title: 'Chief of Staff',     body: 'Runs the Chancellor' },
   { title: 'Minister',           body: 'Heads a portfolio of state' },
-  { title: 'Propaganda Director',body: 'Voice of the Union' },
+  { title: 'Propaganda Director',body: 'Voice of the Nova Union' },
   { title: 'Diplomat',           body: 'Conducts Union foreign affairs' },
   { title: 'Secretary',          body: 'Records and administration' }
 ];
 
 const UNION_STATS = [
-  { num: '3',  label: 'Branches of the Union' },
+  { num: '3',  label: 'Branches of the Nova Union' },
   { num: '9', label: 'Recognized Divisions' },
   { num: '3',  label: 'Seats of the Presidency' },
   { num: '7',  label: 'Official Medals' }
