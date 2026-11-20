@@ -309,10 +309,11 @@
   aspect-ratio: 16 / 9; width: 100%;
   background: #0f0f0f; text-decoration: none; color: var(--paper);
   border: 0; cursor: pointer; transition: all .25s;
-  background-image: radial-gradient(circle at 50% 40%, #221122 0%, #0f0f0f 70%);
+  background-image: linear-gradient(rgba(8,8,8,.5), rgba(8,8,8,.8)), var(--video-thumb, radial-gradient(circle at 50% 40%, #221122 0%, #0f0f0f 70%));
+  background-size: cover; background-position: center;
   padding: 2rem; text-align: center;
 }
-.video-watch:hover { background-image: radial-gradient(circle at 50% 40%, #2b1a2b 0%, #141414 70%); }
+.video-watch:hover { background-image: linear-gradient(rgba(8,8,8,.35), rgba(8,8,8,.65)), var(--video-thumb, radial-gradient(circle at 50% 40%, #2b1a2b 0%, #141414 70%)); }
 .video-watch-kicker { font-family: var(--stencil); font-size: .7rem; letter-spacing: .35em; opacity: .75; margin-bottom: .9rem; }
 .video-watch-title { font-family: var(--display); font-size: clamp(2rem, 8vw, 3.6rem); letter-spacing: .04em; line-height: 1; }
 .video-watch-sub { font-family: var(--body); font-size: .85rem; letter-spacing: .16em; text-transform: uppercase; opacity: .75; margin-top: 1.1rem; }
@@ -405,3 +406,105 @@
 /* Honors document image */
 .honors-document img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
 .honors-document figcaption { text-align: center; font-family: var(--stencil); font-size: .72rem; letter-spacing: .12em; margin-top: .75rem; opacity: .8; }
+
+/* ============================================================
+   LAST UPDATED / ANTHEM / INLINE VIDEO PLAYER
+   ============================================================ */
+
+/* ---------- LAST UPDATED BAR (top of page) ---------- */
+.last-updated {
+  display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
+  gap: .55rem; padding: .32rem 1rem;
+  background: var(--ink); color: var(--paper);
+  border-bottom: 1px solid #333;
+  font-family: var(--stencil); font-size: .66rem; letter-spacing: .18em; text-transform: uppercase;
+}
+.last-updated-label {
+  background: var(--paper); color: var(--ink); font-weight: 700;
+  padding: .1rem .5rem .08rem; letter-spacing: .22em;
+}
+.last-updated-date { font-weight: 700; }
+.last-updated-note { opacity: .5; }
+
+/* ---------- NATIONAL ANTHEM PLAYER ---------- */
+.anthem-strip {
+  background: var(--ink); color: var(--paper);
+  border-top: 3px double var(--paper); border-bottom: 3px double var(--paper);
+}
+.anthem-inner { display: flex; align-items: center; gap: 1.2rem; padding-top: 1.1rem; padding-bottom: 1.1rem; }
+.anthem-badge {
+  flex: 0 0 auto; width: 54px; height: 54px;
+  display: flex; align-items: center; justify-content: center;
+  border: 3px solid var(--paper); font-family: var(--display); font-size: 1.1rem;
+}
+.anthem-copy { display: flex; flex-direction: column; gap: .14rem; min-width: 0; }
+.anthem-kicker { font-family: var(--stencil); font-size: .62rem; letter-spacing: .26em; opacity: .7; }
+.anthem-title { font-family: var(--display); font-size: clamp(.95rem, 2.6vw, 1.35rem); letter-spacing: .05em; }
+.anthem-sub { font-family: var(--body); font-size: .66rem; letter-spacing: .1em; opacity: .6; }
+.anthem-wave { display: flex; align-items: center; gap: 3px; height: 34px; margin-left: auto; opacity: .75; }
+.anthem-wave i {
+  display: block; width: 3px; min-height: 3px; background: var(--paper);
+  height: 20%; animation: anthemPulse 1.1s ease-in-out infinite alternate;
+}
+.anthem-wave i:nth-child(3n)   { animation-duration: .75s; }
+.anthem-wave i:nth-child(4n)   { animation-duration: 1.45s; }
+.anthem-wave i:nth-child(5n)   { animation-duration: .95s; }
+.anthem-wave i:nth-child(2n)   { animation-delay: -.4s; }
+.anthem-wave i:nth-child(3n+1) { animation-delay: -.7s; }
+@keyframes anthemPulse { from { height: 12%; } to { height: 100%; } }
+.anthem-play {
+  flex: 0 0 auto; display: inline-flex; align-items: center; gap: .6rem;
+  background: var(--paper); color: var(--ink); border: 3px solid var(--paper);
+  padding: .55rem .9rem; cursor: pointer;
+  font-family: var(--stencil); font-weight: 700; font-size: .78rem; letter-spacing: .18em;
+  transition: background .15s, color .15s;
+}
+.anthem-play:hover { background: transparent; color: var(--paper); }
+.anthem-play-tri {
+  width: 0; height: 0; flex: 0 0 auto;
+  border-top: 8px solid transparent; border-bottom: 8px solid transparent;
+  border-left: 13px solid currentColor;
+}
+@media (max-width: 720px) {
+  .anthem-inner { flex-wrap: wrap; gap: .8rem; }
+  .anthem-wave { display: none; }
+  .anthem-play { margin-left: auto; }
+}
+@media (max-width: 460px) {
+  .anthem-badge { width: 44px; height: 44px; font-size: .9rem; }
+  .anthem-play { width: 100%; justify-content: center; margin-left: 0; }
+  .last-updated-note { display: none; }
+}
+
+/* ---------- VIDEO WATCH BUTTON ---------- */
+.video-watch-play {
+  position: relative; display: flex; align-items: center; justify-content: center;
+  width: 84px; height: 84px; border: 3px solid var(--paper); border-radius: 50%;
+  margin-bottom: 1.1rem; transition: background .2s;
+}
+.video-watch-play::after {
+  content: ''; width: 0; height: 0; margin-left: 6px;
+  border-top: 14px solid transparent; border-bottom: 14px solid transparent;
+  border-left: 22px solid var(--paper);
+}
+.video-watch:hover .video-watch-play { background: var(--paper); }
+.video-watch:hover .video-watch-play::after { border-left-color: var(--ink); }
+
+/* ---------- INLINE VIDEO PLAYER MODAL ---------- */
+.video-modal-panel {
+  max-width: 940px; background: var(--ink); color: var(--paper);
+  border-color: var(--paper); box-shadow: 12px 12px 0 rgba(0,0,0,.85);
+}
+.video-modal-panel .modal-close { background: var(--paper); color: var(--ink); }
+.video-modal-head {
+  font-family: var(--stencil); font-size: .72rem; letter-spacing: .28em;
+  margin: 0 3.2rem .8rem 0; opacity: .8;
+}
+.video-modal-panel .video-embed { aspect-ratio: 16 / 9; width: 100%; }
+.video-modal-foot {
+  font-family: var(--stencil); font-size: .64rem; letter-spacing: .2em;
+  text-align: center; opacity: .55; margin-top: .8rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  .anthem-wave i { animation: none; height: 45%; }
+}

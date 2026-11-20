@@ -91,6 +91,7 @@ const honoreeMedalSVG = () => medalSVG(3);
 $('#foundingYear') && ($('#foundingYear').textContent = NOVA_CONFIG.lastUpdated);
 $('#footerMotto').textContent = `${NOVA_CONFIG.motto} — THE NOVA UNION`;
 if ($('#aboutUpdated')) $('#aboutUpdated').textContent = NOVA_CONFIG.lastUpdated;
+if ($('#lastUpdated')) $('#lastUpdated').textContent = NOVA_CONFIG.lastUpdated;
 ['discordMain', 'discordMP', 'discordAgency', 'discordGuards'].forEach(k => {
   $$(`[data-discord="${k}"]`).forEach(a => { a.href = NOVA_CONFIG[k]; });
 });
@@ -107,11 +108,44 @@ if (leadershipEl && typeof LEADERSHIP !== 'undefined') {
     </div>`).join('');
 }
 
+/* ============================================================
+   INLINE YOUTUBE PLAYER — plays on the page, no redirect
+   ============================================================ */
+function youtubeId(raw) {
+  const s = String(raw || '').trim();
+  const patterns = [
+    /youtu\.be\/([^?&#/]+)/i,
+    /(?:watch\?(?:.*&)?v=|embed\/|shorts\/|live\/)([^?&#/]+)/i
+  ];
+  for (const re of patterns) { const m = s.match(re); if (m) return m[1]; }
+  return '';
+}
+function youtubeEmbedUrl(raw, autoplay = true) {
+  const id = youtubeId(raw);
+  if (!id) return '';
+  return `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?rel=0&modestbranding=1${autoplay ? '&autoplay=1' : ''}`;
+}
+function openVideoPlayer(raw, title) {
+  const src = youtubeEmbedUrl(raw);
+  if (!src) return;
+  $('#videoModalTitle').textContent = title || 'NOW PLAYING';
+  $('#videoEmbed').innerHTML = `<iframe src="${src}" title="${esc(title || 'Video player')}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+  openModal('#videoModal');
+}
+
+/* National anthem — official recording, plays inline */
+const anthemPlay = $('#anthemPlay');
+if (anthemPlay && typeof NOVA_CONFIG !== 'undefined' && NOVA_CONFIG.anthemUrl) {
+  anthemPlay.addEventListener('click', () => openVideoPlayer(NOVA_CONFIG.anthemUrl, 'NOW PLAYING — NATIONAL ANTHEM OF THE NOVA UNION'));
+}
+
 /* Video of the day (paste youtube URL in js/data.js → VIDEO_OF_DAY) */
 const videoWatchEl = $('#videoWatch');
 if (videoWatchEl && typeof VIDEO_OF_DAY !== 'undefined' && VIDEO_OF_DAY) {
-  videoWatchEl.href = VIDEO_OF_DAY;
   videoWatchEl.hidden = false;
+  const id = youtubeId(VIDEO_OF_DAY);
+  if (id) videoWatchEl.style.setProperty('--video-thumb', `url("https://i.ytimg.com/vi/${id}/hqdefault.jpg")`);
+  videoWatchEl.addEventListener('click', () => openVideoPlayer(VIDEO_OF_DAY, 'NOW PLAYING — VIDEO OF THE DAY'));
 }
 
 /* ───────── Social fronts ───────── */
@@ -285,6 +319,10 @@ function openModal(sel) {
   if (closer) closer.focus();
 }
 function closeModal(modal) {
+  if (modal.id === 'videoModal') {
+    const embed = $('#videoEmbed', modal);
+    if (embed) embed.innerHTML = ''; // stop playback on close
+  }
   modal.hidden = true;
   document.body.style.overflow = '';
   if (lastFocus && lastFocus.focus) lastFocus.focus();

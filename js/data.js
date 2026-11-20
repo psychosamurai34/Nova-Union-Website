@@ -15,6 +15,7 @@ const NOVA_CONFIG = {
   forumReportUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSe28bya9FWfImpwgbK_mUU_g5Ug5u9zUYXYJYcWC6lyedETyQ/viewform',
   forumSuggestUrl: 'https://forms.gle/vbQqUKbwaBsUpPPS7',
   announcementsUrl: '',
+  anthemUrl: 'https://youtu.be/iCkiNXnMbeI?si=MCsk7Voynhd09s9y',
   vrchatGroups: ['Nova Union', 'Nova Brigade']
 };
 
@@ -29,7 +30,7 @@ const VICE_PRESIDENTS = [
   { name: 'syndicatefbx', role: 'Vice President' }
 ];
 
-const VIDEO_OF_DAY = 'https://youtu.be/pq1Ie9pxyWE?si=IWpT85rQDoyh7FRz';
+const VIDEO_OF_DAY = 'https://youtu.be/iCkiNXnMbeI?si=MCsk7Voynhd09s9y';
 
 /* ORDER OF BATTLE (org tree) — Coalition + Holland removed */
 const ORG_TREE = [

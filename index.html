@@ -9,10 +9,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=32">
-<link rel="stylesheet" href="css/union-v2.css?v=32">
+<link rel="stylesheet" href="css/styles.css?v=34">
+<link rel="stylesheet" href="css/union-v2.css?v=34">
 </head>
 <body>
+
+<!-- LAST UPDATED -->
+<div class="last-updated" role="status" aria-label="Site last updated">
+  <span class="last-updated-label">LAST UPDATED</span>
+  <span class="last-updated-date" id="lastUpdated">11/19/2026</span>
+  <span class="last-updated-note">— OFFICIAL SITE OF THE NOVA UNION</span>
+</div>
 
 <!-- ANNOUNCEMENT TICKER -->
 <div class="ticker" role="status" aria-label="Nova Union announcements">
@@ -28,6 +35,7 @@
   </a>
   <nav class="nav-links" aria-label="Site sections">
     <a href="#about">The Union</a>
+    <a href="#anthem">Anthem</a>
     <a href="#leadership">Leadership</a>
     <a href="#order-of-battle">Order of Battle</a>
     <a href="#ranks">Ranks</a>
@@ -61,6 +69,25 @@
     </div>
   </div>
   <div class="hero-fade" aria-hidden="true"></div>
+</section>
+
+<!-- NATIONAL ANTHEM -->
+<section class="anthem-strip" id="anthem" aria-label="Nova Union National Anthem">
+  <div class="wrap anthem-inner">
+    <div class="anthem-badge" aria-hidden="true">NU</div>
+    <div class="anthem-copy">
+      <span class="anthem-kicker">NATIONAL ANTHEM OF THE NOVA UNION</span>
+      <span class="anthem-title">UNITED WE STAND STRONG</span>
+      <span class="anthem-sub">OFFICIAL RECORDING — TAP PLAY TO LISTEN</span>
+    </div>
+    <div class="anthem-wave" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+    <button type="button" class="anthem-play" id="anthemPlay" aria-label="Play the Nova Union national anthem">
+      <span class="anthem-play-tri" aria-hidden="true"></span>
+      <span class="anthem-play-text">PLAY ANTHEM</span>
+    </button>
+  </div>
 </section>
 
 <!-- ABOUT / THE UNION -->
@@ -249,11 +276,12 @@
       <p class="section-lede light">One clip, chosen by the Union High Command. Updated in <code>js/data.js</code>.</p>
     </div>
     <div class="video-frame">
-      <a class="video-watch" id="videoWatch" href="#" target="_blank" rel="noopener" hidden>
-        <span class="video-watch-kicker">VIDEOLINK</span>
-        <span class="video-watch-title">WATCH THE VIDEO</span>
-        <span class="video-watch-sub">TAP TO OPEN ON YOUTUBE</span>
-      </a>
+      <button type="button" class="video-watch" id="videoWatch" hidden aria-label="Play the Video of the Day">
+        <span class="video-watch-play" aria-hidden="true"></span>
+        <span class="video-watch-kicker">VIDEO OF THE DAY</span>
+        <span class="video-watch-title">PLAY THE VIDEO</span>
+        <span class="video-watch-sub">TAP TO PLAY HERE — NO REDIRECT</span>
+      </button>
     </div>
   </div>
 </section>
@@ -339,7 +367,7 @@
     <div class="foot-brand"><img class="foot-logo" src="assets/nova-union-seal.png" alt="The Nova Union seal"><span>THE NOVA UNION</span></div>
     <p class="foot-motto" id="footerMotto">UNITED WE STAND STRONG — THE NOVA UNION</p>
     <nav class="foot-links" aria-label="Footer">
-      <a href="#about">The Union</a><a href="#leadership">Leadership</a><a href="#order-of-battle">Order of Battle</a><a href="#ranks">Ranks</a>
+      <a href="#about">The Union</a><a href="#anthem">Anthem</a><a href="#leadership">Leadership</a><a href="#order-of-battle">Order of Battle</a><a href="#ranks">Ranks</a>
       <a href="#medals">Medals</a><a href="#honors">Honors</a><a href="#news">Nova News</a><a href="#ideology">Ideology &amp; History</a><a href="#video">Video of the Day</a><a href="#doctrine">Doctrine</a><a href="#connect">Find Us</a><a href="#forums">Forums</a>
     </nav>
     <p class="foot-legal">The Nova Union is an independent, fan-run VRChat milsim group. Not affiliated with any government, military, or other VRChat group. All ranks, medals, proclamations and "nations" are faction lore — the discipline is real, the borders are not.</p>
@@ -356,8 +384,18 @@
   <div class="modal-backdrop" data-close-modal></div>
   <div class="modal-panel news-panel" role="document"><button class="modal-close" data-close-modal aria-label="Close">&times;</button><div id="newsModalBody"><!-- rendered --></div></div>
 </div>
+<!-- INLINE VIDEO PLAYER MODAL -->
+<div class="modal" id="videoModal" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle" hidden>
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="modal-panel video-modal-panel" role="document">
+    <button class="modal-close" data-close-modal aria-label="Close">&times;</button>
+    <div class="video-modal-head" id="videoModalTitle">NOW PLAYING</div>
+    <div class="video-embed" id="videoEmbed"></div>
+    <div class="video-modal-foot">THE NOVA UNION — UNITED WE STAND STRONG</div>
+  </div>
+</div>
 
-<script src="js/data.js?v=32"></script>
-<script src="js/app.js?v=32"></script>
+<script src="js/data.js?v=34"></script>
+<script src="js/app.js?v=34"></script>
 </body>
 </html>
