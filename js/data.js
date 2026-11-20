@@ -30,7 +30,7 @@ const VICE_PRESIDENTS = [
   { name: 'syndicatefbx', role: 'Vice President' }
 ];
 
-const VIDEO_OF_DAY = 'https://youtu.be/iCkiNXnMbeI?si=MCsk7Voynhd09s9y';
+const VIDEO_OF_DAY = 'https://youtu.be/pq1Ie9pxyWE?si=8ueiEX1KfnTnmctI';
 
 /* ORDER OF BATTLE (org tree) — Coalition + Holland removed */
 const ORG_TREE = [
