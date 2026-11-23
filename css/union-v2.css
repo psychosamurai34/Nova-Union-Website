@@ -512,3 +512,11 @@
 /* ---------- history section styling ---------- */
 .history-subtitle { font-family: var(--display); font-size: 1.6rem; letter-spacing: .04em; margin: 0 0 .3rem; }
 .history-tagline { font-family: var(--stencil); font-size: .85rem; letter-spacing: .12em; opacity: .85; margin: 0 0 1.4rem; }
+
+/* ---------- government ministries org tree ---------- */
+.gov-org-tree { font-family: var(--mono, ui-monospace, Consolas, monospace); margin: 1rem 0; border: 3px solid var(--ink); padding: 1.2rem 1.5rem; background: var(--paper); }
+.gov-root { font-family: var(--stencil); font-weight: 700; letter-spacing: .15em; font-size: 1rem; margin-bottom: .9rem; padding-bottom: .6rem; border-bottom: 2px solid var(--ink); }
+.gov-level { display: flex; flex-direction: column; gap: .35rem; }
+.gov-level-nested { margin: .35rem 0 .35rem 1.6rem; }
+.gov-node { font-size: .92rem; line-height: 1.5; }
+.gov-branch { color: #555; white-space: pre; }
