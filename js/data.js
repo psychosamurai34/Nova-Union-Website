@@ -36,7 +36,7 @@ const VIDEO_OF_DAY = 'https://youtu.be/pq1Ie9pxyWE?si=8ueiEX1KfnTnmctI';
 const ORG_TREE = [
   { branch: 'THE NOVA GOVERNMENT', blurb: 'Supreme governing authority of the Nova Union', children: ['government', 'agency'] },
   { branch: 'THE NOVA BRIGADE',    blurb: 'The Nova Union’s military fighting force',   children: ['brigade', 'armored', 'medics'] },
-  { branch: 'THE NOVA LEGION',     blurb: 'Elite force of the Nova Union’s order',       children: ['legion', 'reapers', 'guards', 'police'] }
+  { branch: 'THE NOVA LEGION',     blurb: 'Elite force of the Nova Union’s order',       children: ['legion', 'guards', 'police'] }
 ];
 
 /* FACTIONS (divisions) — Coalition + Holland removed */
@@ -90,14 +90,6 @@ const FACTIONS = [
     docs: [{ label: 'Legion ACT — Official Document', href: 'docs/legion-act.md' }], discord: null
   },
   {
-    id: 'reapers', name: 'The Nova Reapers', branch: 'THE NOVA LEGION',
-    initials: 'NR', sealHint: 'SCYTHE', emblem: 'assets/emblems/reapers.png',
-    mandate: 'Operating as a division of the Nova Legion, The Nova Reapers are an elite strike force loyal exclusively to the Presidents and Vice-Presidents. Specializing in stealth, precision strikes, and surprise raids, they execute their leaders’ directives with unwavering loyalty and efficiency.',
-    structure: 'Division of The Nova Legion — loyal exclusively to the Presidents and Vice-Presidents.',
-    eligibility: 'Minimum Rank: Hand Selected — Reapers candidates are exclusively hand-selected from The Nova Brigade.',
-    docs: [], discord: null
-  },
-  {
     id: 'guards', name: 'The Nova Guards', branch: 'THE NOVA LEGION',
     initials: 'NGU', sealHint: 'SHIELD-FILLED', emblem: 'assets/emblems/guards.png',
     mandate: 'Operating as a division of The Nova Legion, The Nova Guards personally protect the Presidents and Vice Presidents. Exclusively loyal to their commands, they monitor conversations, identify suspicious personnel, and ensure the safety of their leaders through constant vigilance and unwavering allegiance.',
@@ -123,7 +115,6 @@ const FACTION_MOTTOS = {
   armored:    'IRON RESOLVE. UNSTOPPABLE FORCE',
   medics:     'THROUGH CHAOS WE BRING HOPE',
   legion:     'ORDER IS OUR STRENGTH',
-  reapers:    'WE REAP WHAT OTHERS FEAR',
   guards:     'WE GUARD WHAT OTHERS CANNOT',
   police:     'UPHOLDING ORDER DEFENDING HONOR'
 };
@@ -201,7 +192,6 @@ const RANK_GROUPS = [
 const REQUIREMENTS = [
   { faction: 'Nova Police',    min: 'E-5', note: 'Members must hold the rank of E-5 or higher to be eligible to join the Nova Police.' },
   { faction: 'Nova Medics',    min: 'E-2', note: 'Members must hold the rank of E-2 or higher to be eligible to join the Medics.' },
-  { faction: 'Reapers',        min: 'Hand Selected', note: 'Reapers candidates are exclusively hand-selected from The Nova Brigade.' },
   { faction: 'Royal Guards',   min: 'E-6', note: 'Members must hold the rank of E-6 or higher to be eligible to join the Royal Guards.' },
   { faction: 'The Government', min: 'Hand Selected', note: 'Government positions are filled through direct selection by authorized leadership.' },
   { faction: 'Nova Armored',   min: 'E-4', note: 'Members must hold the rank of E-4 or higher to be eligible to join the Nova Armored.' },
@@ -285,10 +275,10 @@ const NEWS = [
   {
     id: 'n2', cat: 'REQUIREMENTS', date: 'NOV 11, 2026',
     headline: 'Rank Requirements for All Divisions Published',
-    dek: 'Medics E-2 · Armored E-4 · Police E-5 · Guards E-6 · Agency E-6 · Reapers & Government: Hand Selected.',
+    dek: 'Medics E-2 · Armored E-4 · Police E-5 · Guards E-6 · Agency E-6 · Government: Hand Selected.',
     body: [
       'The Nova Government has published the official minimum rank requirements for entry into every division of the Nova Union, last updated 11/11/2026.',
-      'Prospective members of the Medics require E-2; the Nova Armored E-4; the Nova Police E-5; the Royal Guards and the Agency E-6. The Reapers and all Government positions are filled by direct, hand selection.',
+      'Prospective members of the Medics require E-2; the Nova Armored E-4; the Nova Police E-5; the Royal Guards and the Agency E-6. All Government positions are filled by direct, hand selection.',
       'Members are reminded that misrepresenting qualifications is a dismissal offense under Union doctrine.'
     ],
     sign: '— The Nova Government, 11/11/2026'
@@ -342,7 +332,7 @@ const NEWS = [
 /* STATS BAND */
 const UNION_STATS = [
   { num: '3',  label: 'Branches of the Nova Union' },
-  { num: '9',  label: 'Recognized Divisions' },
+  { num: '8',  label: 'Recognized Divisions' },
   { num: '3',  label: 'Seats of the Presidency' },
   { num: '7',  label: 'Official Medals' }
 ];
