@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=38">
-<link rel="stylesheet" href="css/union-v2.css?v=38">
+<link rel="stylesheet" href="css/styles.css?v=39">
+<link rel="stylesheet" href="css/union-v2.css?v=39">
 </head>
 <body>
 
@@ -159,21 +159,20 @@
       </div>
     </div>
 
-    <div class="roster-section">
+<div class="roster-section">
       <h3 class="roster-heading">THE NOVA GOVERNMENT — MINISTRIES</h3>
       <div class="gov-org-tree">
         <div class="gov-root">THE NOVA GOVERNMENT</div>
-        <div class="gov-level">
-          <div class="gov-node">
-            <span class="gov-branch">├──</span> Ministry of State Affairs
-            <div class="gov-level gov-level-nested">
-              <div class="gov-node"><span class="gov-branch">│&nbsp;&nbsp; ├──</span> Ministry of Interior</div>
-              <div class="gov-node"><span class="gov-branch">│&nbsp;&nbsp; └──</span> Ministry of Exterior</div>
-            </div>
-          </div>
-          <div class="gov-node"><span class="gov-branch">├──</span> Ministry of Defense</div>
-          <div class="gov-node"><span class="gov-branch">└──</span> Ministry of War</div>
-        </div>
+        <ul class="gov-tree">
+          <li>Ministry of State Affairs
+            <ul>
+              <li>Ministry of Interior</li>
+              <li>Ministry of Exterior</li>
+            </ul>
+          </li>
+          <li>Ministry of Defense</li>
+          <li>Ministry of War</li>
+        </ul>
       </div>
     </div>
 
@@ -206,6 +205,23 @@
       <p class="section-lede">Official ranks of the Nova Union — last updated 11/11/2026. From E-1 Recruit to General of The Union.</p>
     </div>
     <div class="rank-groups" id="rankGroups"><!-- rendered --></div>
+    <div class="roster-section">
+      <h3 class="roster-heading">THE NOVA GOVERNMENT — MINISTRIES</h3>
+      <div class="gov-org-tree">
+        <div class="gov-root">THE NOVA GOVERNMENT</div>
+        <ul class="gov-tree">
+          <li>Ministry of State Affairs
+            <ul>
+              <li>Ministry of Interior</li>
+              <li>Ministry of Exterior</li>
+            </ul>
+          </li>
+          <li>Ministry of Defense</li>
+          <li>Ministry of War</li>
+        </ul>
+      </div>
+    </div>
+
     <div class="requirements">
       <h3 class="requirements-title">MINIMUM RANK REQUIREMENTS</h3>
       <p class="requirements-note">Official eligibility for every division — last updated 11/11/2026.</p>
@@ -418,7 +434,7 @@
   </div>
 </div>
 
-<script src="js/data.js?v=38"></script>
-<script src="js/app.js?v=38"></script>
+<script src="js/data.js?v=39"></script>
+<script src="js/app.js?v=39"></script>
 </body>
 </html>

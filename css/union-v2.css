@@ -513,10 +513,15 @@
 .history-subtitle { font-family: var(--display); font-size: 1.6rem; letter-spacing: .04em; margin: 0 0 .3rem; }
 .history-tagline { font-family: var(--stencil); font-size: .85rem; letter-spacing: .12em; opacity: .85; margin: 0 0 1.4rem; }
 
-/* ---------- government ministries org tree ---------- */
+
+
+/* ---------- government ministries org tree (CSS borders, no slanting) ---------- */
 .gov-org-tree { font-family: var(--mono, ui-monospace, Consolas, monospace); margin: 1rem 0; border: 3px solid var(--ink); padding: 1.2rem 1.5rem; background: var(--paper); }
-.gov-root { font-family: var(--stencil); font-weight: 700; letter-spacing: .15em; font-size: 1rem; margin-bottom: .9rem; padding-bottom: .6rem; border-bottom: 2px solid var(--ink); }
-.gov-level { display: flex; flex-direction: column; gap: .35rem; }
-.gov-level-nested { margin: .35rem 0 .35rem 1.6rem; }
-.gov-node { font-size: .92rem; line-height: 1.5; }
-.gov-branch { color: #555; white-space: pre; }
+.gov-root { font-family: var(--stencil); font-weight: 700; letter-spacing: .15em; font-size: 1rem; margin-bottom: 1rem; padding-bottom: .6rem; border-bottom: 2px solid var(--ink); }
+.gov-tree, .gov-tree ul { list-style: none; margin: 0; padding: 0; }
+.gov-tree li { position: relative; padding: .35rem 0 .35rem 1.8rem; font-size: .92rem; line-height: 1.5; }
+.gov-tree li::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 1.2rem; border-left: 2px solid #555; border-bottom: 2px solid #555; }
+.gov-tree > li:last-child::before { bottom: 50%; }
+.gov-tree ul { margin-left: .6rem; }
+.gov-tree ul li::before { left: -.6rem; width: 1.2rem; }
+.gov-tree ul li:last-child::before { bottom: 50%; }
