@@ -517,37 +517,50 @@
 
 
 
-/* ---------- government ministries org tree (screenshot-matched) ---------- */
-.gov-org-tree { margin: 1rem 0; padding: 1.2rem 1.5rem 1.4rem; background: #241914; border: 0; border-radius: 3px; color: #f2efe9; }
-.gov-root { font-family: var(--display); font-weight: 700; letter-spacing: .01em; font-size: 1.05rem; color: #fff; margin: 0 0 1.1rem 0; }
+
+/* ---------- government ministries org tree (website theme) ---------- */
+.gov-org-tree { margin: 1rem 0; border: 3px solid var(--ink); padding: 1.2rem 1.5rem; background: var(--paper); }
+.gov-root { font-family: var(--stencil); font-weight: 700; letter-spacing: .15em; font-size: 1rem; margin: 0 0 1.1rem 0; padding-bottom: .6rem; border-bottom: 2px solid var(--ink); }
 .gov-tree, .gov-tree ul { list-style: none; margin: 0; padding: 0; }
 .gov-tree { margin-left: .3rem; }
-.gov-tree li { position: relative; padding: .28rem 0 .28rem 2.5rem; }
-/* vertical trunk - thin light line */
-.gov-tree li::before { content: ''; position: absolute; left: .55rem; top: 0; bottom: 0; border-left: 1px solid #c9b8ac; }
+.gov-tree li { position: relative; padding: .3rem 0 .3rem 2.5rem; }
+.gov-tree li::before { content: ''; position: absolute; left: .55rem; top: 0; bottom: 0; border-left: 2px solid var(--ink); }
 .gov-tree > li:last-child::before { bottom: 50%; }
-/* horizontal elbow to pill */
-.gov-tree li::after { content: ''; position: absolute; left: .55rem; top: 1.05rem; width: 1.75rem; border-top: 1px solid #c9b8ac; }
+.gov-tree li::after { content: ''; position: absolute; left: .55rem; top: 1.05rem; width: 1.75rem; border-top: 2px solid var(--ink); }
 .gov-tree ul { margin-left: 1.45rem; }
 .gov-tree ul li::before { left: -.75rem; }
 .gov-tree ul li::after { left: -.75rem; width: 1.55rem; }
 .gov-tree ul li:last-child::before { bottom: 50%; }
-/* pill */
 .gov-item { display: inline-block; }
 .gov-pill {
   display: inline-flex; align-items: center; gap: .55rem;
-  background: #3d3759; color: #fff; border: 0;
-  border-radius: 18px; padding: .32rem .95rem;
-  font-family: var(--display); font-size: .82rem; font-weight: 600; letter-spacing: .01em;
+  background: var(--ink); color: var(--paper); border: 2px solid var(--ink);
+  border-radius: 999px; padding: .32rem .95rem;
+  font-family: var(--stencil); font-size: .8rem; letter-spacing: .06em; text-transform: uppercase;
   cursor: pointer; list-style: none; user-select: none;
 }
 .gov-pill::-webkit-details-marker { display: none; }
-.gov-pill::before { content: ''; width: .85rem; height: .85rem; border-radius: 50%; flex: none;
-  background: radial-gradient(circle at 32% 30%, #cdbdf0 0 38%, #7e6cae 39% 100%); }
-.gov-pill:hover { background: #4a4369; }
-.gov-item[open] .gov-pill { background: #524977; }
+.gov-pill::before { content: ''; width: .7rem; height: .7rem; border-radius: 50%; background: var(--paper); flex: none; }
+.gov-pill:hover { background: var(--ink-soft, #1c1c1c); }
+.gov-item[open] .gov-pill { background: var(--ink-soft, #1c1c1c); }
 .gov-desc {
-  margin: .5rem 0 .35rem 2.5rem; padding: .65rem .85rem;
-  background: #2f2220; border-left: 3px solid #9d8ac7; border-radius: 2px;
-  font-size: .84rem; line-height: 1.6; color: #ece6df; max-width: 78ch;
+  margin: .55rem 0 .35rem; padding: .7rem .9rem;
+  background: var(--paper-dim, #e9e9e6); border-left: 4px solid var(--ink);
+  font-size: .85rem; line-height: 1.6; color: var(--ink); max-width: 78ch;
 }
+
+/* ---------- official government announcement ---------- */
+.gov-announcement { border: 3px solid var(--ink); background: var(--paper); padding: 1.5rem 1.8rem; margin-top: 1.5rem; }
+.announcement-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; border-bottom: 2px solid var(--ink); padding-bottom: .6rem; }
+.announcement-tag { font-family: var(--stencil); font-size: .7rem; letter-spacing: .18em; background: var(--ink); color: var(--paper); padding: .2rem .55rem; }
+.announcement-date { font-family: var(--stencil); font-size: .7rem; letter-spacing: .12em; opacity: .7; }
+.announcement-title { font-family: var(--display); font-size: 1.8rem; letter-spacing: .02em; margin: 1rem 0 .8rem; }
+.announcement-salute { font-style: italic; }
+.gov-announcement p { line-height: 1.6; margin: 0 0 .9rem; }
+.announcement-sub { font-family: var(--stencil); font-size: .95rem; letter-spacing: .12em; margin: 1.3rem 0 .5rem; border-left: .5rem solid var(--ink); padding-left: .7rem; }
+.announcement-list { margin: 0 0 1rem 1.2rem; line-height: 1.6; }
+.announcement-list li { margin-bottom: .4rem; }
+.announcement-list-plain { list-style: none; margin-left: 0; }
+.announcement-sign { border-top: 2px solid var(--ink); margin-top: 1.2rem; padding-top: 1rem; display: flex; flex-direction: column; gap: .2rem; }
+.announcement-sign span { font-family: var(--stencil); font-size: .75rem; letter-spacing: .12em; opacity: .8; }
+.announcement-sign strong { font-family: var(--display); font-size: 1.5rem; }

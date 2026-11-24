@@ -63,7 +63,7 @@ const FACTIONS = [
     mandate: 'The Nova Brigade is a specialized military formation within the Nova Union, composed of disciplined and dedicated personnel trained to operate as a cohesive fighting force. The Brigade focuses on military training, coordinated operations, tactical exercises, and mission readiness.',
     structure: 'The primary military formation of the Nova Union. All recruits begin here under the Recruitment Manual.',
     eligibility: 'Open entry — complete Basic Training under the official Recruitment Manual.',
-    docs: [{ label: 'Nova Union Recruitment Manual', href: 'docs/recruitment-manual.md' }], discord: null
+    docs: [{ label: 'Nova Union Recruitment Manual', href: 'doctrine.html#recruitment-manual' }], discord: null
   },
   {
     id: 'armored', name: 'The Nova Armored', branch: 'THE NOVA BRIGADE',
@@ -87,7 +87,7 @@ const FACTIONS = [
     mandate: 'The Nova Legion is an elite force dedicated to the protection, security, and stability of the Nova Union. Comprised of guards, military police, and specialized personnel, the Legion upholds order, enforces regulations, and protects key personnel and institutions.',
     structure: 'An umbrella of specialized orders. Governed by the Legion ACT — maximum 15 members, 8 ranks, mandatory uniform, 14-day loyalty minimum.',
     eligibility: 'Per Legion division — see each division’s requirement. Governed by the Legion ACT.',
-    docs: [{ label: 'Legion ACT — Official Document', href: 'docs/legion-act.md' }], discord: null
+    docs: [{ label: 'Legion ACT — Official Document', href: 'doctrine.html#legion-act' }], discord: null
   },
   {
     id: 'guards', name: 'The Nova Guards', branch: 'THE NOVA LEGION',
