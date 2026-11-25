@@ -124,66 +124,66 @@ const RANK_GROUPS = [
   {
     group: 'LEADERSHIP', blurb: 'The summit of the Union',
     rows: [
-      { name: 'President',       note: 'Three-part presidency' },
-      { name: 'Vice President',  note: 'Two-part vice presidency' },
-      { name: 'Chancellor',      note: 'Senior civilian office' },
-      { name: 'Vice-Chancellor', note: 'Next to the Chancellor' }
+      { name: 'President' },
+      { name: 'Vice President' },
+      { name: 'Chancellor' },
+      { name: 'Vice-Chancellor' }
     ]
   },
   {
     group: 'GOVERNMENT', blurb: 'Six grades of state authority',
     rows: [
-      { name: 'G-6 Prime Minister',    note: 'Speaks for the Government' },
-      { name: 'G-5 Minister',          note: 'Heads a portfolio of state' },
-      { name: 'G-4 Advisor',           note: 'Counsel to the Government' },
-      { name: 'G-3 Campaign Officer',  note: 'Runs official events' },
-      { name: 'G-2 Government Officer',note: 'Executive arm of the state' },
-      { name: 'G-1 Secretary',         note: 'Records and administration' }
+      { name: 'G-6 Prime Minister' },
+      { name: 'G-5 Minister' },
+      { name: 'G-4 Advisor' },
+      { name: 'G-3 Campaign Officer' },
+      { name: 'G-2 Government Officer' },
+      { name: 'G-1 Secretary' }
     ]
   },
   {
     group: 'INTELLIGENCE — THE NOVA AGENCY (TNA)', blurb: 'The eyes and reports of High Command',
     rows: [
-      { name: 'TNA-4 Director',         note: 'Head of the Agency' },
-      { name: 'TNA-3 Deputy Director',  note: 'Second-in-command of the Agency' },
-      { name: 'TNA-2 Intelligence Officer', note: 'Cases and reporting' },
-      { name: 'TNA-1 Field Agent',      note: 'Boots on the ground' }
+      { name: 'TNA-4 Director' },
+      { name: 'TNA-3 Deputy Director' },
+      { name: 'TNA-2 Intelligence Officer' },
+      { name: 'TNA-1 Field Agent' }
     ]
   },
   {
     group: 'GENERALS', blurb: 'Union high command',
     rows: [
-      { name: 'O-11 General of The Union', note: 'Supreme military office' },
-      { name: 'O-10 Lieutenant General',   note: 'Theater command' },
-      { name: 'O-9 Major General',         note: 'Formation command' },
-      { name: 'O-8 Brigadier General',     note: 'Brigade command' }
+      { name: 'O-11 General of The Union' },
+      { name: 'O-10 Lieutenant General' },
+      { name: 'O-9 Major General' },
+      { name: 'O-8 Brigadier General' }
     ]
   },
   {
     group: 'OFFICERS', blurb: 'Commissioned command of the Union',
     rows: [
-      { name: 'O-7 Colonel',            note: 'Senior field officer' },
-      { name: 'O-6 Lieutenant Colonel', note: 'Field grade' },
-      { name: 'O-5 Major',              note: 'Field grade' },
-      { name: 'O-4 Major First Class',  note: 'Field grade, senior' },
-      { name: 'O-3 Captain',            note: 'Company command' },
-      { name: 'O-2 First Lieutenant',   note: 'Platoon command' },
-      { name: 'O-1 Second Lieutenant',  note: 'Commissioned entry' }
+      { name: 'O-7 Colonel' },
+      { name: 'O-6 Lieutenant Colonel' },
+      { name: 'O-5 Major' },
+      { name: 'O-4 Major First Class' },
+      { name: 'O-3 Captain' },
+      { name: 'O-2 First Lieutenant' },
+      { name: 'O-1 Second Lieutenant' }
     ]
   },
   {
     group: 'ENLISTED', blurb: 'The backbone of the Union',
     rows: [
-      { name: 'E-10 Sergeant Major',      note: 'Senior enlisted advisor' },
-      { name: 'E-9 Senior Master Sergeant', note: 'Senior enlisted leader' },
-      { name: 'E-8 Sergeant First Class', note: 'Platoon sergeant' },
-      { name: 'E-7 Staff Sergeant',       note: 'Squad leadership' },
-      { name: 'E-6 Sergeant',             note: 'Sergeant' },
-      { name: 'E-5 Corporal',             note: 'Junior leader' },
-      { name: 'E-4 Specialist',           note: 'Specialist' },
-      { name: 'E-3 Private First Class',  note: 'Experienced private' },
-      { name: 'E-2 Private',              note: 'Private' },
-      { name: 'E-1 Recruit',              note: 'Entry rank' }
+      { name: 'E-10 Sergeant Major' },
+      { name: 'E-9 Senior Master Sergeant' },
+      { name: 'E-8 Sergeant First Class' },
+      { name: 'E-7 Staff Sergeant' },
+      { name: 'E-6 Sergeant' },
+      { name: 'E-5 Corporal' },
+      { name: 'E-4 Specialist' },
+      { name: 'E-3 Private First Class' },
+      { name: 'E-2 Private' },
+      { name: 'E-1 Recruit' }
     ]
   }
 ];
