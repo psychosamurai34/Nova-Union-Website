@@ -285,7 +285,7 @@ $('#rankGroups').innerHTML = RANK_GROUPS.map(g => `
   <div class="rank-group">
     <div class="rank-group-head"><span class="rank-group-name">${esc(g.group)}</span><span class="rank-group-blurb">${esc(g.blurb)}</span></div>
     <ul class="rank-rows">
-      ${g.rows.map(r => `<li><span class="rank-row-name">${esc(r.name)}</span><span class="rank-row-note">${esc(r.note)}</span></li>`).join('')}
+      ${g.rows.map(r => `<li><span class="rank-row-name">${esc(r.name)}</span></li>`).join('')}
     </ul>
   </div>`).join('');
 
