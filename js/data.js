@@ -239,21 +239,21 @@ const MEDALS = [
 
 /* NATIONAL HONORS — this week's roll */
 const HONOREES = [
-  { name: 'ŁØǦǦÏÅ༒ƝØVÄ',    rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: '-Formula-',       rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: 'Terminator1234y', rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: 'ҠƝƗƓĦŦ༒ƝØVÄ',     rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: 'Mædīšøn༒Ñøvå',    rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: 'Vøłŧɇɍs̷øł',       rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: 'Everest_moss',    rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: 'Maria178',        rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: 'Gojo157',         rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' },
-  { name: '༒ᴅᴀʙɪᴇᴛᴛᴜʀᴛʟᴇ༒',  rank: 'HONOREE', citation: 'National Honors — week of November 12, 2026' }
-];
+  { name: 'Mædīšøn༒Ñøvå',   rank: 'HONOREE', citation: 'National Honors — week of November 26, 2026' },
+  { name: 'firewood289',     rank: 'HONOREE', citation: 'National Honors — week of November 26, 2026' },
+  { name: 'Winks2017',       rank: 'HONOREE', citation: 'National Honors — week of November 26, 2026' },
+  { name: '゜galacticgamer人', rank: 'HONOREE', citation: 'National Honors — week of November 26, 2026' },
+  { name: 'Mrs_Iris',        rank: 'HONOREE', citation: 'National Honors — week of November 26, 2026' },
+  { name: 'e-v-e-l-l-e',     rank: 'HONOREE', citation: 'National Honors — week of November 26, 2026' },
+  { name: 'Møŝčøw',         rank: 'HONOREE', citation: 'National Honors — week of November 26, 2026' },
+  { name: 'nixon_1 72c3',   rank: 'HONOREE', citation: 'National Honors — week of November 26, 2026' },
+  { name: 'SnowKin_',       rank: 'HONOREE', citation: 'National Honors — week of November 26, 2026' },
+  { name: 'Emoney1126 c7aa', rank: 'HONOREE', citation: 'National Honors — week of November 26, 2026' }
+];;
 
 /* UNION WIRE announcements */
 const ANNOUNCEMENTS = [
-  { tag: 'NATIONAL HONORS', date: 'EVERY THURSDAY', text: 'National Honors convenes Thursday — ten names will be called before the Nova Union.' },
+  { tag: 'NATIONAL HONORS', date: 'EVERY THURSDAY', text: 'National Honors convenes every Thursday — ten names will be called before the Nova Union. The weekly roll is live.' },
   { tag: 'LEGION ACT',      date: 'IN EFFECT',      text: 'The Legion ACT is official doctrine for all Legion divisions — size, ranks, uniform, loyalty and conduct.' },
   { tag: 'RECRUITMENT',     date: 'NOW',            text: 'Open intake across all divisions. Represent the Nova Brigade, join the Nova Union and Brigade groups, and report for training.' },
   { tag: 'PROMOTION STANDARDS', date: 'NOW IN EFFECT', text: 'Enlisted once every 2 days - Officers every 5 - Generals every 7 - only the three Presidents may promote. Performance promotes. Demotions are enforced.' }
@@ -317,8 +317,8 @@ const NEWS = [
     sign: 'Forever Loyal, Forever Nova — Your Vice Chancellor, ƇΉΙΡ༒ƝØVÄ'
   },
   {
-    id: 'n6', cat: 'NATIONAL HONORS', date: 'NOV 12, 2026',
-    headline: 'National Honors — Week of November 12, 2026',
+    id: 'n6', cat: 'NATIONAL HONORS', date: 'NOV 26, 2026',
+    headline: 'National Honors — Week of November 26, 2026',
     dek: 'Ten names called before the Nova Union — official issue under the Presidency.',
     body: [
       'By order of the Presidency, the Weekly National Honors recognize individuals who have demonstrated outstanding dedication, activity, professionalism, loyalty, and meaningful contributions to the Nova Union.',
@@ -326,6 +326,19 @@ const NEWS = [
       'National Honors convenes every Thursday. If you are not recognized this week, keep your head up — next Thursday is always a new draw.'
     ],
     sign: 'By Order of the Presidency, KÅƤEĐ༒ƝØVÄ'
+  }  ,
+  {
+    id: 'n7', cat: 'NATIONAL HONORS', date: 'NOV 26, 2026',
+    headline: 'National Honors — Weekly Recognition',
+    dek: 'Official recognition published every Thursday. UNITED WE STAND STRONG.',
+    body: [
+      'It is time for the Weekly National Honors again, an official recognition published every Thursday to acknowledge ten individuals who have demonstrated outstanding activity, loyalty, professionalism, leadership, and dedication to the Nova Union.',
+      'Each week, ten individuals will be selected and recognized for their contributions to the Union and its military institutions.',
+      'If you are disappointed about not appearing on this week\'s list, do not let that discourage you. Keep focusing on your responsibilities, remain active, and continue producing the work you have been doing. Remember that there will be new recipients every week, and those who are not recognized this Thursday may very well be recognized the next.',
+      'I want to make one thing absolutely clear: I am proud of everyone who is part of The Nova Union. Every contribution matters, whether it receives public recognition or not.',
+      'UNITED WE STAND STRONG.'
+    ],
+    sign: 'Kaped — President of The Nova Union'
   }
 ];
 
