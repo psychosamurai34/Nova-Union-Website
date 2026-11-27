@@ -669,3 +669,13 @@ body, .nav, .nav-links a, .nav-brand, .hero, .section, .section-title, .section-
 .last-updated-label { background: #000000 !important; color: #ffffff !important; }
 .nav-yt { background: #000000 !important; color: #ffffff !important; }
 .nav-yt:hover { background: #ffffff !important; color: #000000 !important; }
+
+/* Announcements card -> dark theme */
+.gov-announcement { background: #161616 !important; color: #ffffff !important; }
+.gov-announcement p, .gov-announcement li, .announcement-title, .announcement-sub,
+.announcement-salute, .announcement-sign span, .announcement-sign strong { color: #ffffff !important; }
+.announcement-head, .announcement-tag { background: #ffffff !important; color: #000000 !important; }
+.announcement-date { color: #dddddd !important; }
+.announcement-sub { border-left-color: #ffffff !important; }
+.announcement-sign { border-top-color: #ffffff !important; }
+.announcement-list li { border-bottom-color: #333 !important; }
