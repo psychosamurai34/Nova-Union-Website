@@ -569,7 +569,12 @@
    FULL DARK THEME — all sections + inner cards, no white squares
    ============================================================ */
 /* Sections: force every section background to black */
-.section, .section.white { background: #0b0b0b !important; }
+.section, .section.white {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255,255,255,.05) 0 2px, transparent 2.5px) 0 0 / 26px 26px,
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,.04) 0 2px, transparent 2.5px) 13px 13px / 26px 26px,
+    #000000 !important;
+}
 /* Section heads on black */
 .section .section-title { color: var(--paper) !important; }
 .section .section-lede { color: #c4c4c4 !important; }
