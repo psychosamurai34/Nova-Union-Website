@@ -564,29 +564,3 @@
 .announcement-sign { border-top: 2px solid var(--ink); margin-top: 1.2rem; padding-top: 1rem; display: flex; flex-direction: column; gap: .2rem; }
 .announcement-sign span { font-family: var(--stencil); font-size: .75rem; letter-spacing: .12em; opacity: .8; }
 .announcement-sign strong { font-family: var(--display); font-size: 1.5rem; }
-
-/* ========== FINAL LAYOUT OVERRIDES ========== */
-/* All sections now black - force light text on their heads */
-.section.black .section-title { color: var(--paper) !important; }
-.section.black .section-tag { background: var(--paper) !important; color: var(--ink) !important; }
-.section.black .section-lede { color: #c9c9c9 !important; }
-
-/* Ranks: single centered column, no boxes */
-#ranks .rank-groups { display: flex; flex-direction: column; align-items: center; width: 100%; }
-#ranks .rank-group { width: min(100%, 560px); margin: 0 0 1.5rem; }
-#ranks .rank-group-head { justify-content: center; text-align: center; }
-#ranks .rank-rows { width: 100%; }
-#ranks .rank-row-name { text-align: center; width: 100%; }
-
-/* Medals: centered, Grand Star first and centered */
-#medals .medals-grid { display: flex; flex-direction: column; align-items: center; width: 100%; }
-#medals .medal-card { width: min(100%, 560px); }
-#medals .medal-card:first-child { order: -1; }
-
-/* Footer signature */
-.foot-signature { display: flex; justify-content: center; margin: 1.5rem 0; }
-.foot-signature img { max-width: 420px; width: 100%; height: auto; filter: grayscale(1) brightness(3); opacity: .9; }
-
-/* Center all section heads + titles (one line, together) */
-.section-head { text-align: center !important; }
-.section-title, .section-lede { margin-left: auto !important; margin-right: auto !important; }
