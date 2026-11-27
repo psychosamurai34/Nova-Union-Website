@@ -679,3 +679,7 @@ body, .nav, .nav-links a, .nav-brand, .hero, .section, .section-title, .section-
 .announcement-sub { border-left-color: #ffffff !important; }
 .announcement-sign { border-top-color: #ffffff !important; }
 .announcement-list li { border-bottom-color: #333 !important; }
+
+/* Footer signature at very bottom */
+.footer-signature { display: flex; justify-content: center; margin: 2rem 0 0; padding-top: 1.5rem; border-top: 2px solid #444; }
+.footer-signature img { max-width: 480px; width: 80%; height: auto; }
