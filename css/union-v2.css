@@ -639,3 +639,33 @@ body, .nav, .nav-links a, .nav-brand, .hero, .section, .section-title, .section-
 .social-card:hover, .forum-card:hover, .doc-link:hover {
   color: #000000 !important;
 }
+
+/* ============================================================
+   FIX WHITE-ON-WHITE: nav, buttons, date, ticker, all chrome
+   ============================================================ */
+/* Nav bar -> dark, text stays white */
+.nav, .nav-brand, .nav-word, .nav-links { background: #000000 !important; }
+.nav-links a { color: #ffffff !important; }
+.nav-logo { filter: invert(1); }
+.nav-cta { background: #ffffff !important; color: #000000 !important; }
+/* Last updated band -> dark with light text */
+.last-updated, .last-updated-band { background: #000000 !important; color: #ffffff !important; }
+.last-updated-date, .last-updated-label, .last-updated-note { color: #ffffff !important; }
+/* Ticker -> dark with light text */
+.ticker, .ticker-label, .ticker-track { background: #000000 !important; color: #ffffff !important; }
+/* Hero buttons: solid = white bg black text, ghost = transparent white text */
+.btn-solid { background: #ffffff !important; color: #000000 !important; }
+.btn-solid:hover { background: #dddddd !important; color: #000000 !important; }
+.btn-ghost { background: transparent !important; color: #ffffff !important; border-color: #ffffff !important; }
+.btn-ghost:hover { background: #ffffff !important; color: #000000 !important; }
+/* Any element with white bg gets dark text (labels, tags, headers) */
+.section-tag, .section-tag.light { background: #ffffff !important; color: #000000 !important; }
+.rank-table thead th { background: #ffffff !important; color: #000000 !important; }
+.modal-close { background: #ffffff !important; color: #000000 !important; }
+/* Footer links */
+.foot-links a { color: #ffffff !important; }
+
+/* Final white-on-white fixes */
+.last-updated-label { background: #000000 !important; color: #ffffff !important; }
+.nav-yt { background: #000000 !important; color: #ffffff !important; }
+.nav-yt:hover { background: #ffffff !important; color: #000000 !important; }
