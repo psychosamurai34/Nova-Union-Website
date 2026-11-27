@@ -612,3 +612,25 @@
 .presidency { background: #161616 !important; }
 /* Footer already dark */
 .foot-signature img { filter: grayscale(1) brightness(3); }
+
+/* ============================================================
+   ALL BLACK TEXT -> WHITE (dark theme)
+   ============================================================ */
+/* Every element that had black text, make it white */
+body, .nav, .nav-links a, .nav-brand, .hero, .section, .section-title, .section-lede,
+.charter-lead, p, li, span, h1, h2, h3, h4, strong, em, code, a,
+.roster-name, .roster-reach-name, .division-name, .medal-name, .honor-name,
+.news-headline, .doc-name, .forum-card h3, .rank-row-name, .rank-group-name,
+.find-key, .enlist-head h3, .requirements-title, .notice-title, .doc-link {
+  color: #ffffff !important;
+}
+/* Keep white-on-black button/label combos correct (paper bg -> ink text) */
+.btn-solid, .section-tag, .section-tag.light, .stat-cell, .step-num, .notice-date,
+.dossier-btn, .doc-card-top, .forum-icon, .discord-front .df-glyph, .gov-pill {
+  color: #ffffff !important;
+}
+/* Hover states that swap to paper background keep dark text */
+.btn-solid:hover, .nav-cta:hover, .btn-ghost:hover, .dossier-btn:hover,
+.social-card:hover, .forum-card:hover, .doc-link:hover {
+  color: #000000 !important;
+}
