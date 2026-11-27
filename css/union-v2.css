@@ -564,3 +564,51 @@
 .announcement-sign { border-top: 2px solid var(--ink); margin-top: 1.2rem; padding-top: 1rem; display: flex; flex-direction: column; gap: .2rem; }
 .announcement-sign span { font-family: var(--stencil); font-size: .75rem; letter-spacing: .12em; opacity: .8; }
 .announcement-sign strong { font-family: var(--display); font-size: 1.5rem; }
+
+/* ============================================================
+   FULL DARK THEME — all sections + inner cards, no white squares
+   ============================================================ */
+/* Sections: force every section background to black */
+.section, .section.white { background: #0b0b0b !important; }
+/* Section heads on black */
+.section .section-title { color: var(--paper) !important; }
+.section .section-lede { color: #c4c4c4 !important; }
+.section .section-tag { background: var(--paper) !important; color: var(--ink) !important; }
+
+/* Every card/panel/block inside sections -> dark with light text */
+.roster-card, .division-card, .medal-card, .honor-card, .news-card, .doc-card, .forum-card,
+.reach-block, .gov-org-tree, .gov-desc, .rank-group, .requirements, .notice-board,
+.find-us, .socials, .enlist, .presidency, .announcement-card, .dossier-block, .rank-table-wrap {
+  background: #161616 !important;
+  color: var(--paper) !important;
+  border-color: #cfcfcf !important;
+}
+.roster-name, .division-name, .medal-name, .honor-name, .news-headline, .doc-name, .forum-card h3,
+.rank-row-name, .rank-group-name, .find-key, .enlist-head h3, .requirements-title, .notice-title {
+  color: var(--paper) !important;
+}
+.roster-reach-name, .division-motto, .medal-summary, .news-dek, .doc-summary, .forum-card p,
+.rank-table td, .rank-table th, .find-list span, .enlist-steps div {
+  color: #d8d8d8 !important;
+}
+/* Secondary boxes that were white */
+.roster-row, .roster-reach, .rank-group-head, .rank-rows li, .doc-card-top, .forum-icon,
+.discord-front, .find-list li, .notice-list li, .announcement-head {
+  background: #1e1e1e !important;
+  color: var(--paper) !important;
+}
+/* Rank rows: alternate subtle dark */
+.rank-rows li:nth-child(even) { background: #141414 !important; }
+/* Tables */
+.rank-table thead th { background: var(--paper) !important; color: var(--ink) !important; }
+.rank-table tbody td { background: #161616 !important; color: var(--paper) !important; }
+/* Government pill tree stays paper-bg by design - make its inner blocks dark */
+.gov-org-tree { background: #161616 !important; color: var(--paper) !important; }
+.gov-root { color: var(--paper) !important; border-bottom-color: #cfcfcf !important; }
+.gov-tree li::before, .gov-tree li::after { border-color: #cfcfcf !important; }
+/* Honors document image sits on white (its own image) - keep visible */
+.honors-document { background: #161616 !important; }
+/* Presidency slate dark */
+.presidency { background: #161616 !important; }
+/* Footer already dark */
+.foot-signature img { filter: grayscale(1) brightness(3); }

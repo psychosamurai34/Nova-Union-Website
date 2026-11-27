@@ -69,7 +69,7 @@ const FACTIONS = [
     id: 'armored', name: 'The Nova Armored', branch: 'THE NOVA BRIGADE',
     initials: 'NVA', sealHint: 'TANK', emblem: 'assets/emblems/armored.png',
     mandate: 'The Nova Armored commands the tanks and armored vehicles of the Nova Union, delivering overwhelming firepower, heavy protection, and decisive battlefield support. Through disciplined crews, coordinated maneuvers, and armored warfare expertise, they spearhead assaults, reinforce allied forces, and defend the strength and unity of the Nova Union.',
-    structure: 'Division of The Nova Brigade. Tanks and armored vehicles of the Union.',
+    structure: 'Division of The Nova Brigade. Tanks and armored vehicles of The Nova Union.',
     eligibility: 'Minimum Rank: E-4 — Members must hold the rank of E-4 or higher to be eligible to join the Nova Armored.',
     docs: [], discord: null
   },
@@ -77,7 +77,7 @@ const FACTIONS = [
     id: 'medics', name: 'The Nova Medics', branch: 'THE NOVA BRIGADE',
     initials: 'NM', sealHint: 'STAR-OF-LIFE', emblem: 'assets/emblems/medics.png',
     mandate: 'The Nova Medics provides essential medical support, treating wounded personnel, saving lives, and ensuring the readiness of Nova Union forces. Through skilled medical care, rapid battlefield response, and unwavering dedication, they safeguard the lives of their comrades and uphold the strength and unity of the Nova Union.',
-    structure: 'Division of The Nova Brigade. Combat medical support for the Union.',
+    structure: 'Division of The Nova Brigade. Combat medical support for The Nova Union.',
     eligibility: 'Minimum Rank: E-2 — Members must hold the rank of E-2 or higher to be eligible to join the Medics.',
     docs: [], discord: null
   },
@@ -122,7 +122,7 @@ const FACTION_MOTTOS = {
 /* RANK STRUCTURE (official) */
 const RANK_GROUPS = [
   {
-    group: 'LEADERSHIP', blurb: 'The summit of the Union',
+    group: 'LEADERSHIP', blurb: 'The summit of The Nova Union',
     rows: [
       { name: 'President' },
       { name: 'Vice President' },
@@ -160,7 +160,7 @@ const RANK_GROUPS = [
     ]
   },
   {
-    group: 'OFFICERS', blurb: 'Commissioned command of the Union',
+    group: 'OFFICERS', blurb: 'Commissioned command of The Nova Union',
     rows: [
       { name: 'O-7 Colonel' },
       { name: 'O-6 Lieutenant Colonel' },
@@ -172,7 +172,7 @@ const RANK_GROUPS = [
     ]
   },
   {
-    group: 'ENLISTED', blurb: 'The backbone of the Union',
+    group: 'ENLISTED', blurb: 'The backbone of The Nova Union',
     rows: [
       { name: 'E-10 Sergeant Major' },
       { name: 'E-9 Senior Master Sergeant' },
@@ -203,22 +203,22 @@ const MEDALS = [
   {
     name: 'Grand Star of the Nova Union', tier: 'GRAND STAR', level: 7,
     summary: 'The highest decoration awarded by the Nova Union.',
-    earn: ['Demonstrate extraordinary dedication to the Union.', 'Make an exceptional contribution to development.', 'Display outstanding leadership and commitment.', 'Be nominated by the President.']
+    earn: ['Demonstrate extraordinary dedication to The Nova Union.', 'Make an exceptional contribution to development.', 'Display outstanding leadership and commitment.', 'Be nominated by the President.']
   },
   {
     name: 'Star of Distinguished Service', tier: 'STAR', level: 6,
     summary: 'Recognizes exceptional service to the government, military, or other Union institutions.',
-    earn: ['Consistently perform duties exceptionally well.', 'Serve the Union with distinction.', 'Make significant improvements to an institution or department.', 'Receive an official recommendation from leadership.']
+    earn: ['Consistently perform duties exceptionally well.', 'Serve The Nova Union with distinction.', 'Make significant improvements to an institution or department.', 'Receive an official recommendation from leadership.']
   },
   {
     name: 'Star of Exceptional Merit', tier: 'STAR', level: 5,
     summary: 'Recognizes outstanding achievements that benefit the Nova Union.',
-    earn: ['Accomplish something exceptionally beneficial to the Union.', 'Organize successful major events or projects.', 'Introduce valuable ideas or reforms.', 'Demonstrate exceptional initiative.']
+    earn: ['Accomplish something exceptionally beneficial to The Nova Union.', 'Organize successful major events or projects.', 'Introduce valuable ideas or reforms.', 'Demonstrate exceptional initiative.']
   },
   {
     name: 'Star of Valor', tier: 'STAR', level: 4,
     summary: 'Recognizes extraordinary courage, integrity, and selflessness.',
-    earn: ['Demonstrate courage in a difficult situation.', 'Stand up for members facing unfair treatment.', 'Protect the reputation and interests of the Union through responsible actions.', 'Put the wellbeing of the community before personal recognition.']
+    earn: ['Demonstrate courage in a difficult situation.', 'Stand up for members facing unfair treatment.', 'Protect the reputation and interests of The Nova Union through responsible actions.', 'Put the wellbeing of the community before personal recognition.']
   },
   {
     name: 'Silver Star of Excellence', tier: 'SILVER STAR', level: 3,
@@ -233,7 +233,7 @@ const MEDALS = [
   {
     name: 'Bronze Star of Dedication', tier: 'BRONZE STAR', level: 1,
     summary: 'Recognizes members who demonstrate dedication and make meaningful contributions to the Nova Union.',
-    earn: ['Demonstrate a positive attitude toward the Union.', 'Assist with activities and community projects.', 'Show willingness to help other members.', 'Demonstrate commitment to their responsibilities.']
+    earn: ['Demonstrate a positive attitude toward The Nova Union.', 'Assist with activities and community projects.', 'Show willingness to help other members.', 'Demonstrate commitment to their responsibilities.']
   }
 ];
 
@@ -289,10 +289,10 @@ const NEWS = [
     dek: 'Seven decorations, from the Bronze Star of Dedication to the Grand Star of the Nova Union.',
     body: [
       'By order of the Presidency, the complete Nova Union Medals registry has been published. Seven decorations are awarded: the Grand Star of the Nova Union, the Star of Distinguished Service, the Star of Exceptional Merit, the Star of Valor, the Silver Star of Excellence, the Silver Star of Commitment, and the Bronze Star of Dedication.',
-      'The Grand Star — the highest decoration of the Union — is conferred only upon nomination by the President. The Bronze Star of Dedication is open to any member who shows up, stands tall, and honors the Union.',
+      'The Grand Star — the highest decoration of The Nova Union — is conferred only upon nomination by the President. The Bronze Star of Dedication is open to any member who shows up, stands tall, and honors The Nova Union.',
       'Medal design and registry maintained by ƇΉΙΡ༒ƝØVÄ.'
     ],
-    sign: '— Nova Union Medals Registry'
+    sign: '— The Nova Union Medals Registry'
   },
   {
     id: 'n4', cat: 'RECRUITMENT', date: 'NOV 2026',
@@ -333,7 +333,7 @@ const NEWS = [
     dek: 'Official recognition published every Thursday. UNITED WE STAND STRONG.',
     body: [
       'It is time for the Weekly National Honors again, an official recognition published every Thursday to acknowledge ten individuals who have demonstrated outstanding activity, loyalty, professionalism, leadership, and dedication to the Nova Union.',
-      'Each week, ten individuals will be selected and recognized for their contributions to the Union and its military institutions.',
+      'Each week, ten individuals will be selected and recognized for their contributions to The Nova Union and its military institutions.',
       'If you are disappointed about not appearing on this week\'s list, do not let that discourage you. Keep focusing on your responsibilities, remain active, and continue producing the work you have been doing. Remember that there will be new recipients every week, and those who are not recognized this Thursday may very well be recognized the next.',
       'I want to make one thing absolutely clear: I am proud of everyone who is part of The Nova Union. Every contribution matters, whether it receives public recognition or not.',
       'UNITED WE STAND STRONG.'
